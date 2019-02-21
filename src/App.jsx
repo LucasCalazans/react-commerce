@@ -6,7 +6,7 @@ import GlobalStyle from './GlobalStyle';
 const App = ({ className }) => (
     <main className={className}>
         <GlobalStyle />
-        <Title>Webjump React Commerce</Title>
+        <Title>React Commerce</Title>
     </main>
 );
 
