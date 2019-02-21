@@ -48,7 +48,7 @@
         "webpack-cli": "2.1.4",
         "webpack-dev-server": "^3.1.14"
     },
-    "homepage": "https://lucascalazans.github.io/webjump-react-commerce",
+    "homepage": "https://lucascalazans.github.io/react-commerce",
     "husky": {
         "hooks": {
             "pre-commit": "pretty-quick --staged"
