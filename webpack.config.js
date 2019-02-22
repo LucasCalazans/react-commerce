@@ -18,6 +18,9 @@ module.exports = (env, args) => ({
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'async',
         }),
+        new webpack.DefinePlugin({
+            BASE_HOST: args.mode === 'development' ? '' : process.env.npm_package_homepage,
+        }),
     ],
     devtool: args.mode === 'development' ? 'inline-source-map' : 'none',
     module: {
@@ -55,6 +58,6 @@ module.exports = (env, args) => ({
         stats: 'errors-only',
     },
     output: {
-        publicPath: '/',
+        publicPath: args.mode === 'development' ? '/' : process.env.npm_package_homepage,
     },
 });
