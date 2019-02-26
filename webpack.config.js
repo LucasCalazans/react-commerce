@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
+console.log("opa");
+
 module.exports = (env, args) => ({
     resolve: {
         extensions: ['.js', '.jsx'],
