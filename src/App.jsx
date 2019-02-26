@@ -8,7 +8,7 @@ const App = ({ className }) => {
     const [inputValue, setInputValue] = useState('');
     const onInputChange = ev => {
         const { value: inputValue } = ev.target;
-        setInputValue(value => (value = inputValue));
+        setInputValue(inputValue);
     };
     return (
         <main className={className}>
