@@ -7,8 +7,7 @@ import Input from './Input';
 const App = ({ className }) => {
     const [inputValue, setInputValue] = useState('');
     const onInputChange = ev => {
-        const { value: inputValue } = ev.target;
-        setInputValue(inputValue);
+        setInputValue(ev.target.value);
     };
     return (
         <main className={className}>

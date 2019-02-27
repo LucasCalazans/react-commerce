@@ -1,7 +1,8 @@
 import React from 'react';
 import App from '../src/App';
-import { cleanup, render, fireEvent } from 'react-testing-library';
+import { cleanup, render, fireEvent, getByPlaceholderText } from 'react-testing-library';
 import * as jestDom from 'jest-dom';
+import Input from '../src/Input';
 
 expect.extend(jestDom);
 
@@ -10,8 +11,8 @@ describe('<Input />', () => {
 
     test('if input changes values', () => {
         const inputValue = 'test';
-        const { getByPlaceholderText } = render(<App />);
-        const inputNode = getByPlaceholderText('Type something');
+        const { getByTestId } = render(<Input data-testid="input-test" />);
+        const inputNode = getByTestId('input-test');
         fireEvent.change(inputNode, { target: { value: inputValue } });
         expect(inputNode.value).toBe('test');
     });
