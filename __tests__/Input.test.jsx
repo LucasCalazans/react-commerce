@@ -1,6 +1,5 @@
 import React from 'react';
-import App from '../src/App';
-import { cleanup, render, fireEvent, getByPlaceholderText } from 'react-testing-library';
+import { cleanup, render, fireEvent } from 'react-testing-library';
 import * as jestDom from 'jest-dom';
 import Input from '../src/Input';
 
