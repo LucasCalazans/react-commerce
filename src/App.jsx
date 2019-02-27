@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
+import { Icon } from './components/Icons';
 import Input from './Input';
 
 const App = ({ className }) => {
@@ -13,7 +14,10 @@ const App = ({ className }) => {
         <main className={className}>
             <GlobalStyle />
             <Title>React Commerce</Title>
+
             <Input placeholder="Type something" onChange={onInputChange} value={inputValue} />
+
+            <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
         </main>
     );
 };
