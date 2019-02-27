@@ -2,15 +2,14 @@ import React from 'react';
 import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
-import { UmbrellaIcon, HomeIcon } from './Components/Icons/icons';
+import { Icon } from './components/Icons';
 
 const App = ({ className }) => (
     <main className={className}>
         <GlobalStyle />
         <Title>React Commerce</Title>
 
-        <UmbrellaIcon umbrellaFill="blue" iconWidth="60" iconHeight="50" />
-        <HomeIcon homefill="#ff00ff" iconWidth="40" iconHeight="40" />
+        <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
     </main>
 );
 
