@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import { Icon } from './components/Icons';
+import Input from './Input';
 
-const App = ({ className }) => (
-    <main className={className}>
-        <GlobalStyle />
-        <Title>React Commerce</Title>
+const App = ({ className }) => {
+    const [inputValue, setInputValue] = useState('');
+    const onInputChange = ev => {
+        setInputValue(ev.target.value);
+    };
+    return (
+        <main className={className}>
+            <GlobalStyle />
+            <Title>React Commerce</Title>
 
-        <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
-    </main>
-);
+            <Input placeholder="Type something" onChange={onInputChange} value={inputValue} />
 
+            <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
+        </main>
+    );
+};
 export default styled(App)`
     width: 100%;
     height: 100%;
