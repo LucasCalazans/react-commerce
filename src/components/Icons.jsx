@@ -28,8 +28,7 @@ export const Icon = props => {
             width={iconWidth}
             height={iconHeight}
             viewBox={icons[props.id].viewBox}
-            aria-w3bjump
-            labelledby="title"
+            aria-labelledby="title"
         >
             <title id="title">{icons[props.id].iconName}</title>
             <path fill={iconFill} d={icons[props.id].path} />

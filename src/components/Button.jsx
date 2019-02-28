@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { colors, btnSizes } from '../helpers/styles';
 
-const color = props => {
-    switch (props.color) {
+const color = ({ color }) => {
+    switch (color) {
         case 'secondary':
             return colors.secondary;
         case 'success':
@@ -17,8 +17,8 @@ const color = props => {
     }
 };
 
-const size = props => {
-    switch (props.btnSizes) {
+const size = ({ size }) => {
+    switch (size) {
         case 'small':
             return btnSizes.small;
         case 'large':
@@ -31,9 +31,9 @@ const size = props => {
 export default styled.button`
     padding: 12px 15px;
     border: 0;
-    background-color: ${props => color(props)};
+    background-color: ${color};
     color: #f5f5f5;
-    height: ${props => size(props)}px;
+    height: ${size}px;
     display: flex;
     align-items: center;
 `;
