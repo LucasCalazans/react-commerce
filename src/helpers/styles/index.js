@@ -1,4 +1,4 @@
 import colors from './colors';
-import size from './size';
+import btnSizes from './btnSizes';
 
-export { colors, size };
+export { colors, btnSizes };
