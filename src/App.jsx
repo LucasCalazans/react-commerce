@@ -3,6 +3,7 @@ import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import { Icon } from './components/Icons';
+import { Alerts } from './components/Alerts';
 import Input from './Input';
 
 const App = ({ className }) => {
@@ -13,6 +14,13 @@ const App = ({ className }) => {
     return (
         <main className={className}>
             <GlobalStyle />
+
+            <Alerts id="warning">
+                <div className="message">
+                    <strong>Alert!</strong> React commerce.
+                </div>
+            </Alerts>
+
             <Title>React Commerce</Title>
 
             <Input placeholder="Type something" onChange={onInputChange} value={inputValue} />
@@ -21,6 +29,7 @@ const App = ({ className }) => {
         </main>
     );
 };
+
 export default styled(App)`
     width: 100%;
     height: 100%;
