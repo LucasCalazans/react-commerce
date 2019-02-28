@@ -3,7 +3,7 @@ import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import { Icon } from './components/Icons';
-import { Alerts } from './components/Alerts';
+import Alert from './components/Alert';
 import Input from './Input';
 
 const App = ({ className }) => {
@@ -11,15 +11,18 @@ const App = ({ className }) => {
     const onInputChange = ev => {
         setInputValue(ev.target.value);
     };
+
+    const [hasAlert, setHasAlert] = useState(true);
+
     return (
         <main className={className}>
             <GlobalStyle />
 
-            <Alerts id="warning">
-                <div className="message">
+            {hasAlert ? (
+                <Alert id="success" onClose={() => setHasAlert(false)}>
                     <strong>Alert!</strong> React commerce.
-                </div>
-            </Alerts>
+                </Alert>
+            ) : null}
 
             <Title>React Commerce</Title>
 
