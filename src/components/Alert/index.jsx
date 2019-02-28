@@ -28,19 +28,17 @@ const TYPES = {
     },
 };
 
-class Alert extends Component {
-    render() {
-        const current = TYPES[this.props.id];
+export const Alert = props => {
+    const current = TYPES[props.id];
 
-        return (
-            <AlertWrapper current={current}>
-                {this.props.children}
-                <Button className="closeModal" onClick={this.props.onClose} id={this.props.id}>
-                    <Icon id="close" iconFill={current.color} iconWidth="12" iconHeight="12" />
-                </Button>
-            </AlertWrapper>
-        );
-    }
-}
+    return (
+        <AlertWrapper current={current}>
+            {props.children}
+            <Button className="closeModal" onClick={props.onClose} id={props.id}>
+                <Icon id="close" iconFill={current.color} iconWidth="12" iconHeight="12" />
+            </Button>
+        </AlertWrapper>
+    );
+};
 
 export default Alert;

@@ -19,7 +19,7 @@ const App = ({ className }) => {
             <GlobalStyle />
 
             {hasAlert ? (
-                <Alert id="success" onClose={() => setHasAlert(false)}>
+                <Alert id="info" onClose={() => setHasAlert(false)}>
                     <strong>Alert!</strong> React commerce.
                 </Alert>
             ) : null}
