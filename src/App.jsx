@@ -3,6 +3,7 @@ import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import { Icon } from './components/Icons';
+import Alert from './components/Alert';
 import Input from './Input';
 import Tooltip, { TooltipWrapper } from './components/Tooltip';
 
@@ -14,9 +15,18 @@ const App = ({ className }) => {
 
     const [tooltipActive, tooltipHover] = useState(false);
 
+    const [hasAlert, setHasAlert] = useState(true);
+
     return (
         <main className={className}>
             <GlobalStyle />
+
+            {hasAlert ? (
+                <Alert id="info" onClose={() => setHasAlert(false)}>
+                    <strong>Alert!</strong> React commerce.
+                </Alert>
+            ) : null}
+
             <Title>React Commerce</Title>
 
             <Input placeholder="Type something" onChange={onInputChange} value={inputValue} />
@@ -33,6 +43,7 @@ const App = ({ className }) => {
         </main>
     );
 };
+
 export default styled(App)`
     width: 100%;
     height: 100%;
