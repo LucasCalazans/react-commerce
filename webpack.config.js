@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = (env, args) => ({
     resolve: {
@@ -18,6 +19,10 @@ module.exports = (env, args) => ({
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'async',
         }),
+        new webpack.DefinePlugin({
+            BASE_HOST: args.mode === 'development' ? '' : process.env.npm_package_homepage,
+        }),
+        new CleanWebpackPlugin(['dist']),
     ],
     devtool: args.mode === 'development' ? 'inline-source-map' : 'none',
     module: {
@@ -55,6 +60,6 @@ module.exports = (env, args) => ({
         stats: 'errors-only',
     },
     output: {
-        publicPath: '/',
+        publicPath: args.mode === 'development' ? '/' : process.env.npm_package_homepage,
     },
 });
