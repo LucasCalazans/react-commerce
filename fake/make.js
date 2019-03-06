@@ -1,3 +1,4 @@
+const fs = require('fs');
 const faker = require('faker');
 
 const qty = {
@@ -57,4 +58,7 @@ for (let i = 1; i <= qty.categories; i++) {
     });
 }
 
-console.log(JSON.stringify(data));
+fs.writeFile('data.json', JSON.stringify(data, null, '\t'), err => {
+    if (err) throw err;
+    console.log('Saved!');
+});
