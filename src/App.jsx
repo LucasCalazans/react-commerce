@@ -3,8 +3,9 @@ import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import { Icon } from './components/Icons';
+import Input from './components/Input';
+import Button from './components/Button';
 import Alert from './components/Alert';
-import Input from './Input';
 
 const App = ({ className }) => {
     const [inputValue, setInputValue] = useState('');
@@ -29,6 +30,10 @@ const App = ({ className }) => {
             <Input placeholder="Type something" onChange={onInputChange} value={inputValue} />
 
             <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
+
+            <Button color="secondary" size="small">
+                Hello, World
+            </Button>
         </main>
     );
 };
