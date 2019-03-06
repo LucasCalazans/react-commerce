@@ -3,8 +3,8 @@
         {
             "id": 1,
             "name": "Frontend Team",
-            "email": "frontend@webjump.com.br",
-            "password": "webjump"
+            "email": "frontend@reactcommerce.com",
+            "password": "reactcommerce"
         }
     ]
 }
