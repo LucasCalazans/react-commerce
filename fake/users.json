@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Frontend Team",
+            "email": "frontend@reactcommerce.com",
+            "password": "reactcommerce"
+        }
+    ]
+}

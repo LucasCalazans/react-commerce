@@ -3,8 +3,9 @@ import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import { Icon } from './components/Icons';
+import Input from './components/Input';
+import Button from './components/Button';
 import Alert from './components/Alert';
-import Input from './Input';
 import Tooltip, { TooltipWrapper } from './components/Tooltip';
 
 const App = ({ className }) => {
@@ -35,11 +36,15 @@ const App = ({ className }) => {
                 onMouseOut={() => tooltipHover(false)}
             >
                 <Icon id="question" iconFill="blue" iconWidth="42" iconHeight="42" />
-                <Tooltip active={tooltipActive}>
+                <Tooltip active={tooltipActive} position="right">
                     <span>Type something on this input</span>
                 </Tooltip>
             </TooltipWrapper>
             <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
+
+            <Button color="secondary" size="small">
+                Hello, World
+            </Button>
         </main>
     );
 };
