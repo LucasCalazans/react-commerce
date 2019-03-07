@@ -69,10 +69,6 @@ const Tooltip = styled.div`
     }
 `;
 
-// const getLeft = ({ position }) => {
-//     return (position === 'top' ? '50%' : '0');
-// }
-
 export const TooltipWrapper = styled.div`
     position: relative;
 `;
