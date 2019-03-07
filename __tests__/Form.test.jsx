@@ -11,7 +11,7 @@ describe('<Form />', () => {
     test('if onSubmit is fired', () => {
         const onSubmitMock = jest.fn(e => {
             e.preventDefault();
-            console.log('submit');
+            return 'submit';
         });
         const { getByTestId } = render(<Form onSubmit={onSubmitMock} data-testid="submit-test" />);
         const formNode = getByTestId('submit-test');
