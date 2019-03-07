@@ -18,32 +18,13 @@ const App = ({ className }) => {
     return (
         <main className={className}>
             <GlobalStyle />
-
-            {hasAlert ? (
-                <Alert id="info" onClose={() => setHasAlert(false)}>
-                    <strong>Alert!</strong> React commerce.
-                </Alert>
-            ) : null}
-
-            <Title>React Commerce</Title>
-
-            <Input placeholder="Type something" onChange={onInputChange} value={inputValue} />
-
-            <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
-
-            <Button color="secondary" size="small">
-                Hello, World
-            </Button>
         </main>
     );
 };
 
 export default styled(App)`
-    width: 100%;
-    height: 100%;
     display: flex;
-    font-size: 1.6rem;
-    align-items: center;
-    justify-content: center;
-    background-color: papayawhip;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 `;
