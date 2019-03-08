@@ -1,13 +1,14 @@
-import React from 'react';
 import styled from 'styled-components';
 
-export default styled.div``;
+export const Overlay = styled.div`
+    position: ${({ type }) => (type === 'inline' ? 'relative' : 'fixed')};
+    background-color: ${({ type }) => (type === 'inline' ? 'transparent' : 'rgba(0, 0, 0, 0.5)')};
+    padding: ${({ type }) => (type === 'inline' ? 'none' : '25px')};
+    width: ${({ type }) => (type === 'fullscreen' ? '100%' : 'none')};
+    height: ${({ type }) => (type === 'fullscreen' ? '100%' : 'none')};
 
-export const Button = styled.button`
-    background: transparent;
-    border: none;
-    float: right;
-    cursor: pointer;
-    padding: 0;
-    margin-top: 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
