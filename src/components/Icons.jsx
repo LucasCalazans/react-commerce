@@ -14,13 +14,21 @@ const icons = {
         viewBox: '0 0 34 34',
         iconName: 'Umbrella',
     },
+
+    quarterCircle: {
+        path:
+            'm15.314 3e-3v9.032c3.262 0.107 5.884 2.787 5.884 6.075 0 3.356-2.73 6.084-6.085 6.084s-6.085-2.729-6.085-6.084c0-0.077 9e-3 -0.154 0.012-0.229h-9.034c-1e-3 0.076-6e-3 0.153-6e-3 0.229 0 8.333 6.779 15.111 15.113 15.111 8.333 0 15.112-6.778 15.112-15.111 0-8.265-6.67-14.999-14.911-15.107z',
+        viewBox: '0 0 30.225 30.224',
+        iconName: 'Quarter Circle',
+    },
 };
 
 export const Icon = props => {
     const iconFill = props.iconFill || 'black';
     const iconWidth = props.iconWidth || '34';
     const iconHeight = props.iconHeight || '34';
-
+    const rotate = props.rotate || false;
+    console.log('rotate', rotate);
     return (
         <svg
             className={icons[props.id].iconName}
@@ -30,6 +38,16 @@ export const Icon = props => {
             viewBox={icons[props.id].viewBox}
             aria-labelledby="title"
         >
+            <animateTransform
+                attributeName="transform"
+                type={rotate ? 'rotate' : ''}
+                calcMode="linear"
+                values="0 0 0;360 0 0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="0s"
+                repeatCount="indefinite"
+            />
             <title id="title">{icons[props.id].iconName}</title>
             <path fill={iconFill} d={icons[props.id].path} />
         </svg>
