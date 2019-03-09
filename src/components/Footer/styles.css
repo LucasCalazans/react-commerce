@@ -34,3 +34,18 @@
     line-height: 24px;
     display: table-row-group;
 }
+
+:local(.container2) {
+    position: absolute;
+    padding: 0 0 0 30%;
+}
+:local(.outline) {
+    width: 391px;
+    height: 24px;
+    color: #707070;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.4px;
+    line-height: 24px;
+}

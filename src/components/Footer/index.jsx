@@ -14,6 +14,14 @@ const footerLinks = [
                 title: 'Serviços',
                 path: 'xxx',
             },
+            {
+                title: 'Manutenção',
+                path: 'xxx',
+            },
+            {
+                title: 'Sistema de Trocas',
+                path: 'xxx',
+            },
         ],
     },
     {
@@ -25,6 +33,10 @@ const footerLinks = [
             },
             {
                 title: 'Nosso Historia',
+                path: 'xxx',
+            },
+            {
+                title: 'Trabalhe Conosco',
                 path: 'xxx',
             },
         ],
@@ -40,6 +52,18 @@ const footerLinks = [
                 title: 'Política de Troca',
                 path: 'xxx',
             },
+            {
+                title: 'Termos e Condições',
+                path: 'xxx',
+            },
+            {
+                title: 'FAQ',
+                path: 'xxx',
+            },
+            {
+                title: 'Fale Conosco',
+                path: 'xxx',
+            },
         ],
     },
     {
@@ -48,6 +72,10 @@ const footerLinks = [
             {
                 number: '080000000',
                 email: 'ajuda@scania.com.br',
+                icons: [
+                    <Icon id="visa" iconFill="#2394BC" iconWidth="50" iconHeight="50" />,
+                    <Icon id="paypal" iconFill="#283593" iconWidth="50" iconHeight="55" />,
+                ],
             },
         ],
     },
@@ -55,27 +83,33 @@ const footerLinks = [
 
 const Footer = () => {
     return (
-        <div className={styles.container}>
-            {footerLinks &&
-                footerLinks.map((footerlinks, index) => {
-                    return (
-                        <dl key={index}>
-                            {' '}
-                            <h2>{footerlinks.title}</h2>
-                            {footerlinks.links &&
-                                footerlinks.links.map((link, index) => {
-                                    return (
-                                        <dt key={index}>
-                                            <a href={link.path}>{link.title}</a>
-                                            <span>{link.number}</span>
-                                            <span>{link.email}</span>
-                                        </dt>
-                                    );
-                                })}
-                        </dl>
-                    );
-                })}
-        </div>
+        <Fragment>
+            <div className={styles.container}>
+                {footerLinks &&
+                    footerLinks.map((footerlinks, index) => {
+                        return (
+                            <dl key={index}>
+                                {' '}
+                                <h2>{footerlinks.title}</h2>
+                                {footerlinks.links &&
+                                    footerlinks.links.map((link, index) => {
+                                        return (
+                                            <dt key={index}>
+                                                <a href={link.path}>{link.title}</a>
+                                                <span>{link.number}</span>
+                                                <span>{link.email}</span>
+                                                <span>{link.icons}</span>
+                                            </dt>
+                                        );
+                                    })}
+                            </dl>
+                        );
+                    })}
+            </div>
+            <div className={styles.container2}>
+                <p className={styles.outline}>Truck Transport ©Todos os Direitos reservados.</p>
+            </div>
+        </Fragment>
     );
 };
 
