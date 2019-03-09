@@ -24,12 +24,13 @@
 }
 
 :local(span) {
-    width: 152px;
-    height: 20px;
+    width: 169px;
+    height: 68px;
     color: #707070;
     font-family: Montserrat;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 1.6px;
+    line-height: 24px;
     display: table-row-group;
 }
