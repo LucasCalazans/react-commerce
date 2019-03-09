@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import styled from 'styled-components';
 import { Icon } from '../Icons';
+import styles from './styles.css';
 
 const footerLinks = [
     {
@@ -42,9 +42,6 @@ const footerLinks = [
             },
         ],
     },
-];
-
-const contactLinks = [
     {
         title: 'Suporte',
         links: [
@@ -58,33 +55,22 @@ const contactLinks = [
 
 const Footer = () => {
     return (
-        <div>
+        <div className={styles.container}>
             {footerLinks &&
                 footerLinks.map((footerlinks, index) => {
                     return (
                         <dl key={index}>
                             {' '}
-                            {footerlinks.title}
+                            <h2>{footerlinks.title}</h2>
                             {footerlinks.links &&
                                 footerlinks.links.map((link, index) => {
                                     return (
                                         <dt key={index}>
                                             <a href={link.path}>{link.title}</a>
+                                            <span>{link.number}</span>
+                                            <span>{link.email}</span>
                                         </dt>
                                     );
-                                })}
-                        </dl>
-                    );
-                })}
-            {contactLinks &&
-                contactLinks.map((contactlinks, index) => {
-                    return (
-                        <dl key={index}>
-                            {' '}
-                            {contactlinks.title}
-                            {contactlinks.links &&
-                                contactlinks.links.map((link, index) => {
-                                    return <Icon id="umbrella" />;
                                 })}
                         </dl>
                     );
@@ -93,6 +79,4 @@ const Footer = () => {
     );
 };
 
-export default styled(Footer)`
-    display: flex;
-`;
+export default Footer;
