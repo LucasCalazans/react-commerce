@@ -1,6 +1,12 @@
 import React, { Fragment } from 'react';
-import { Icon } from '../Icons';
 import styles from './styles.css';
+import boleto from './icons/boleto.svg';
+import elo from './icons/elo.svg';
+import mastercard from './icons/mastercard.svg';
+import paypal from './icons/paypal.svg';
+import visa from './icons/visa.svg';
+import telephone from './icons/telephone.svg';
+import email from './icons/email.svg';
 
 const footerLinks = [
     {
@@ -72,9 +78,14 @@ const footerLinks = [
             {
                 number: '080000000',
                 email: 'ajuda@scania.com.br',
-                icons: [
-                    <Icon id="visa" iconFill="#2394BC" iconWidth="50" iconHeight="50" />,
-                    <Icon id="paypal" iconFill="#283593" iconWidth="50" iconHeight="55" />,
+                emailicon: [<img src={email} height="20" width="20" />],
+                numbericon: [<img src={telephone} height="20" width="20" />],
+                img: [
+                    <img width="30" height="30" src={boleto} />,
+                    <img width="30" height="30" src={elo} />,
+                    <img width="30" height="30" src={mastercard} />,
+                    <img width="30" height="30" src={paypal} />,
+                    <img width="30" height="30" src={visa} />,
                 ],
             },
         ],
@@ -96,9 +107,17 @@ const Footer = () => {
                                         return (
                                             <dt key={index}>
                                                 <a href={link.path}>{link.title}</a>
-                                                <span>{link.number}</span>
-                                                <span>{link.email}</span>
-                                                <span>{link.icons}</span>
+                                                <div>
+                                                    <span>
+                                                        {link.numbericon}
+                                                        {link.number}
+                                                    </span>
+                                                    <span>
+                                                        {link.emailicon}
+                                                        {link.email}
+                                                    </span>
+                                                    <div>{link.img}</div>
+                                                </div>
                                             </dt>
                                         );
                                     })}
