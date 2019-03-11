@@ -6,6 +6,7 @@ import paypal from '../icons/paypal.svg';
 import visa from '../icons/visa.svg';
 import telephone from '../icons/telephone.svg';
 import email from '../icons/email.svg';
+import { FooterImages } from '../styles';
 
 const footerLinks = [
     {
@@ -77,14 +78,14 @@ const footerLinks = [
             {
                 number: '080000000',
                 email: 'ajuda@scania.com.br',
-                emailicon: [<img src={email} height="20" width="20" />],
-                numbericon: [<img src={telephone} height="20" width="20" />],
+                emailicon: [<FooterImages src={email} height="20" width="20" />],
+                numbericon: [<FooterImages src={telephone} height="20" width="20" />],
                 img: [
-                    <img width="30" height="30" src={boleto} />,
-                    <img width="30" height="30" src={elo} />,
-                    <img width="30" height="30" src={mastercard} />,
-                    <img width="30" height="30" src={paypal} />,
-                    <img width="30" height="30" src={visa} />,
+                    <FooterImages width="30" height="30" src={boleto} />,
+                    <FooterImages width="30" height="30" src={elo} />,
+                    <FooterImages width="30" height="30" src={mastercard} />,
+                    <FooterImages width="30" height="30" src={paypal} />,
+                    <FooterImages width="30" height="30" src={visa} />,
                 ],
             },
         ],

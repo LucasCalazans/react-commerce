@@ -1,31 +1,40 @@
 import React, { Fragment } from 'react';
-import styles from './styles.css';
 import FooterLinks from './links/index';
+import {
+    FooterContainer,
+    FooterCategories,
+    CategoryLinks,
+    SupportInfo,
+    FooterCopyright,
+    FooterCopyrightPhrase,
+} from './styles';
 
 const Footer = () => {
     return (
         <Fragment>
-            <div className={styles.container}>
+            <FooterContainer>
                 {FooterLinks &&
                     FooterLinks.map((FooterLinks, index) => {
                         return (
                             <dl key={index}>
                                 {' '}
-                                <h2>{FooterLinks.title}</h2>
+                                <FooterCategories key={index}>{FooterLinks.title}</FooterCategories>
                                 {FooterLinks.links &&
                                     FooterLinks.links.map((link, index) => {
                                         return (
                                             <dt key={index}>
-                                                <a href={link.path}>{link.title}</a>
+                                                <CategoryLinks href={link.path}>
+                                                    {link.title}
+                                                </CategoryLinks>
                                                 <div>
-                                                    <span>
+                                                    <SupportInfo>
                                                         {link.numbericon}
                                                         {link.number}
-                                                    </span>
-                                                    <span>
+                                                    </SupportInfo>
+                                                    <SupportInfo>
                                                         {link.emailicon}
                                                         {link.email}
-                                                    </span>
+                                                    </SupportInfo>
                                                     <div>{link.img}</div>
                                                 </div>
                                             </dt>
@@ -34,10 +43,12 @@ const Footer = () => {
                             </dl>
                         );
                     })}
-            </div>
-            <div className={styles.container2}>
-                <p className={styles.outline}>Truck Transport ©Todos os Direitos reservados.</p>
-            </div>
+            </FooterContainer>
+            <FooterCopyright>
+                <FooterCopyrightPhrase>
+                    Truck Transport ©Todos os Direitos reservados.
+                </FooterCopyrightPhrase>
+            </FooterCopyright>
         </Fragment>
     );
 };

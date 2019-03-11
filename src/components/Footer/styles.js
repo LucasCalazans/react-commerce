@@ -1,8 +1,12 @@
-:local(.container) {
+import React from 'react';
+import styled from 'styled-components';
+
+export const FooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
-}
-:local(h2) {
+`;
+
+export const FooterCategories = styled.h2`
     width: 152px;
     height: 20px;
     color: #14214e;
@@ -11,8 +15,9 @@
     font-weight: 700;
     letter-spacing: 1.6px;
     text-transform: uppercase;
-}
-:local(a) {
+`;
+
+export const CategoryLinks = styled.a`
     width: 169px;
     height: 68px;
     color: #707070;
@@ -21,9 +26,9 @@
     font-weight: 400;
     letter-spacing: 1.6px;
     line-height: 24px;
-}
+`;
 
-:local(span) {
+export const SupportInfo = styled.span`
     width: 169px;
     height: 68px;
     color: #707070;
@@ -33,13 +38,14 @@
     letter-spacing: 1.6px;
     line-height: 24px;
     display: table-row-group;
-}
+`;
 
-:local(.container2) {
+export const FooterCopyright = styled.div`
     position: absolute;
     padding: 0 0 0 30%;
-}
-:local(.outline) {
+`;
+
+export const FooterCopyrightPhrase = styled.div`
     width: 391px;
     height: 24px;
     color: #707070;
@@ -48,7 +54,8 @@
     font-weight: 400;
     letter-spacing: 1.4px;
     line-height: 24px;
-}
-:local(img) {
+`;
+
+export const FooterImages = styled.img`
     padding-right: 10px;
-}
+`;
