@@ -79,6 +79,5 @@
             "./__tests__/initial-configuration.js"
         ],
         "collectCoverage": false
-    },
-    "cleanSrc": "rimraf dist/src"
+    }
 }

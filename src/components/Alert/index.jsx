@@ -29,7 +29,7 @@ const TYPES = {
 };
 
 export const Alert = props => {
-    const current = [props.id];
+    const current = TYPES[props.id];
 
     return (
         <AlertWrapper current={current}>
