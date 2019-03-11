@@ -9,16 +9,16 @@ const Loader = ({ type, icon, color, width, height, loading, rotate }) => {
     color ? color : (color = 'yellow');
     width ? width : (width = '35');
     height ? height : (height = '35');
-    rotate ? rotate : (rotate = true);
+    rotate !== undefined ? rotate : (rotate = true);
 
     return !loading ? null : (
         <Overlay type={type}>
             <Icon
                 id={icon}
-                rotate={rotate}
                 iconFill={color}
                 iconWidth={width}
                 iconHeight={height}
+                rotate={rotate}
             />
         </Overlay>
     );

@@ -28,7 +28,7 @@ export const Icon = props => {
     const iconWidth = props.iconWidth || '34';
     const iconHeight = props.iconHeight || '34';
     const rotate = props.rotate || false;
-    console.log('rotate', rotate);
+
     return (
         <svg
             className={icons[props.id].iconName}

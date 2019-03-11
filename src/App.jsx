@@ -3,7 +3,7 @@ import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import { Icon } from './components/Icons';
-import Input from './components/Input';
+import Input from './Input';
 import Loader from './components/Loader';
 
 const App = ({ className }) => {
@@ -19,16 +19,6 @@ const App = ({ className }) => {
             <Input placeholder="Type something" onChange={onInputChange} value={inputValue} />
 
             <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
-
-            <Loader
-                loading={true}
-                type="normal"
-                icon="quarterCircle"
-                color="yellow"
-                width="35"
-                height="35"
-                rotate={true}
-            />
         </main>
     );
 };
