@@ -1,14 +1,20 @@
 import React from 'react';
-import boleto from '../icons/boleto.svg';
-import elo from '../icons/elo.svg';
-import mastercard from '../icons/mastercard.svg';
-import paypal from '../icons/paypal.svg';
-import visa from '../icons/visa.svg';
-import telephone from '../icons/telephone.svg';
-import email from '../icons/email.svg';
-import { FooterImages } from '../styles';
+import boleto from './icons/boleto.svg';
+import elo from './icons/elo.svg';
+import mastercard from './icons/mastercard.svg';
+import paypal from './icons/paypal.svg';
+import visa from './icons/visa.svg';
+import telephone from './icons/telephone.svg';
+import email from './icons/email.svg';
+import {
+    FooterContainer,
+    FooterCategories,
+    CategoryLinks,
+    SupportInfo,
+    FooterImages,
+} from './styles';
 
-const footerLinks = [
+const FooterLinks = [
     {
         title: 'Categories',
         links: [
@@ -92,4 +98,41 @@ const footerLinks = [
     },
 ];
 
-export default footerLinks;
+const MainFooter = () => {
+    return (
+        <FooterContainer>
+            {FooterLinks &&
+                FooterLinks.map((FooterLinks, index) => {
+                    return (
+                        <dl key={index}>
+                            {' '}
+                            <FooterCategories key={index}>{FooterLinks.title}</FooterCategories>
+                            {FooterLinks.links &&
+                                FooterLinks.links.map((link, index) => {
+                                    return (
+                                        <dt key={index}>
+                                            <CategoryLinks href={link.path}>
+                                                {link.title}
+                                            </CategoryLinks>
+                                            <div>
+                                                <SupportInfo>
+                                                    {link.numbericon}
+                                                    {link.number}
+                                                </SupportInfo>
+                                                <SupportInfo>
+                                                    {link.emailicon}
+                                                    {link.email}
+                                                </SupportInfo>
+                                                <div>{link.img}</div>
+                                            </div>
+                                        </dt>
+                                    );
+                                })}
+                        </dl>
+                    );
+                })}
+        </FooterContainer>
+    );
+};
+
+export default MainFooter;
