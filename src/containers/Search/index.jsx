@@ -24,6 +24,7 @@ const Search = props => {
     const onSubmitHandler = e => {
         e.preventDefault();
         setQuery(input);
+        setInput('');
     };
 
     useEffect(() => {
