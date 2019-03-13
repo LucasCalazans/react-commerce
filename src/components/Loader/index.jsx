@@ -1,23 +1,23 @@
 import React from 'react';
-
 import { Icon } from '../Icons';
 import { Overlay } from './styles';
+import { colors, sizes } from '../../helpers/styles';
 
-const Loader = ({ type, icon, color, width, height, loading, rotate }) => {
-    type ? type : (type = 'normal');
-    icon ? icon : (icon = 'quarterCircle');
-    color ? color : (color = 'yellow');
-    width ? width : (width = '35');
-    height ? height : (height = '35');
-    rotate !== undefined ? rotate : (rotate = true);
-
+const Loader = ({
+    type = 'default',
+    icon = 'quarterCircle',
+    color = 'primary',
+    size = 'xLarge',
+    rotate = true,
+    loading = false,
+}) => {
     return !loading ? null : (
         <Overlay type={type}>
             <Icon
                 id={icon}
-                iconFill={color}
-                iconWidth={width}
-                iconHeight={height}
+                iconFill={colors[color]}
+                iconWidth={sizes[size]}
+                iconHeight={sizes[size]}
                 rotate={rotate}
             />
         </Overlay>
