@@ -5,25 +5,25 @@ import { Star } from './styles';
 class Rating extends Component {
     state = {
         rating: this.props.rating || null,
-        temp_rating: null,
+        tempRating: null,
     };
 
-    rate = rating => {
+    setRate = rating => {
         this.setState({
             rating: rating,
-            temp_rating: rating,
+            tempRating: rating,
         });
     };
 
-    star_hover = rating => {
+    starHover = rating => {
         this.setState({
             rating: rating,
-            temp_rating: this.state.rating,
+            tempRating: this.state.rating,
         });
     };
 
-    star_out = () => {
-        this.setState({ rating: this.state.temp_rating });
+    starOut = () => {
+        this.setState({ rating: this.state.tempRating });
     };
 
     render() {
@@ -34,9 +34,9 @@ class Rating extends Component {
 
             stars.push(
                 <Star
-                    onClick={this.rate.bind(this, i)}
-                    onMouseOver={this.star_hover.bind(this, i)}
-                    onMouseOut={this.star_out}
+                    onClick={() => this.setRate(i)}
+                    onMouseOver={() => this.starHover(i)}
+                    onMouseOut={this.starOut}
                     key={i}
                 >
                     <Icon id="star" iconFill={fill} iconWidth="28" iconHeight="28" />
