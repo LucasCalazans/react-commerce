@@ -32,7 +32,7 @@ const Search = props => {
     }, [query]);
 
     return (
-        <Form onSubmit={onSubmitHandler}>
+        <Form onSubmit={onSubmitHandler} data-testid="form-test">
             <Input placeholder="Busque um produto" onChange={onChangeHandler} value={input} />
             <Button type="submit">Buscar</Button>
         </Form>

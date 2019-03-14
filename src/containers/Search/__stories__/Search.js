@@ -1,5 +1,4 @@
 import Search from '../index';
-import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 
 const stories = storiesOf('Search', module);
