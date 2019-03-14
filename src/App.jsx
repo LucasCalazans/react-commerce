@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
-import { Icon } from './components/Icons';
+import Icon from './components/Icons';
 import Input from './components/Input';
 import Button from './components/Button';
 import Alert from './components/Alert';

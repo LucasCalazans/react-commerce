@@ -4,7 +4,7 @@ import Rating from '../../Rating';
 
 const stories = storiesOf('Rating', module);
 
-stories.add('Ratings', () => (
+stories.add('Rating', () => (
     <Fragment>
         <Rating />
     </Fragment>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon } from '../../components/Icons';
+import Icon from '../../components/Icons';
 import { Star } from './styles';
 
 class Rating extends Component {
