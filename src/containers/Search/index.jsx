@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Form from '../../components/Form';
-import Input from '../../components/Input';
-import Button from '../../components/Button';
+import { Form, Input, Button } from '../../components/index';
 
 const Search = props => {
     const [input, setInput] = useState('');

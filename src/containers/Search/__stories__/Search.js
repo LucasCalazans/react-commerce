@@ -1,3 +1,4 @@
+import React from 'react';
 import Search from '../index';
 import { storiesOf } from '@storybook/react';
 
