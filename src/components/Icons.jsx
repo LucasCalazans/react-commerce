@@ -37,7 +37,7 @@ const icons = {
     },
 };
 
-export const Icon = props => {
+const Icon = props => {
     const iconFill = props.iconFill || 'black';
     const iconWidth = props.iconWidth || '34';
     const iconHeight = props.iconHeight || '34';
@@ -67,3 +67,5 @@ export const Icon = props => {
         </svg>
     );
 };
+
+export default Icon;
