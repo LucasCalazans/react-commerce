@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Icon } from '../../components/Icons';
 import { Star } from './styles';
 
-class Index extends Component {
+class Rating extends Component {
     state = {
         rating: this.props.rating || null,
         temp_rating: null,
@@ -15,7 +15,7 @@ class Index extends Component {
         });
     };
 
-    star_over = rating => {
+    star_hover = rating => {
         this.setState({
             rating: rating,
             temp_rating: this.state.rating,
@@ -35,7 +35,7 @@ class Index extends Component {
             stars.push(
                 <Star
                     onClick={this.rate.bind(this, i)}
-                    onMouseOver={this.star_over.bind(this, i)}
+                    onMouseOver={this.star_hover.bind(this, i)}
                     onMouseOut={this.star_out}
                     key={i}
                 >
@@ -44,8 +44,8 @@ class Index extends Component {
             );
         }
 
-        return <div className="star-rating">{stars}</div>;
+        return stars;
     }
 }
 
-export default Index;
+export default Rating;

@@ -6,7 +6,6 @@ import { Icon } from './components/Icons';
 import Input from './components/Input';
 import Button from './components/Button';
 import Alert from './components/Alert';
-import Rating from './components/Rating';
 
 const App = ({ className }) => {
     const [inputValue, setInputValue] = useState('');
@@ -35,8 +34,6 @@ const App = ({ className }) => {
             <Button color="secondary" size="small">
                 Hello, World
             </Button>
-
-            <Rating />
         </main>
     );
 };
