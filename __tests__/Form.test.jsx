@@ -1,7 +1,7 @@
 import React from 'react';
 import { cleanup, render, fireEvent } from 'react-testing-library';
 import * as jestDom from 'jest-dom';
-import Form from '../src/components';
+import { Form } from '../src/components';
 
 expect.extend(jestDom);
 
