@@ -4,14 +4,14 @@ import { Icon } from '../../components/Icons';
 
 const LogoAccount = styled(Icon)`
     & path {
-        stroke: #000000;
+        stroke: #14214e;
         transform: translate(-1476px, -40px);
         stroke-width: 2;
     }
 `;
 
 const AccountIcon = () => {
-    return <LogoAccount id="account" iconFill="#ffffff" iconWidth="34" iconHeight="34" />;
+    return <LogoAccount id="account" iconFill="#ffffff" iconWidth="32" iconHeight="32" />;
 };
 
 export default AccountIcon;

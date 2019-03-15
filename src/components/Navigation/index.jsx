@@ -1,42 +1,69 @@
 import React from 'react';
 import styled from 'styled-components';
+import Sidebar from 'react-sidebar';
+import { Icon } from '../../components/Icons';
+import CategoryList from '../../components/CategoryList';
+import { colors, sizes, media } from '../../helpers/styles/index';
 
-const NavUl = styled.ul`
-    display: flex;
+const NavigationFull = styled.div`
+    display: none;
+    @media (max-width: 767px) {
+        display: flex;
+    }
+
+    & .menu-mobile-box {
+        max-width: 80%;
+    }
 `;
 
-const NavList = styled.li`
-    float: left;
-    list-style: none;
-    text-transform: uppercase;
-    margin: 0 10px;
+const MenuBtn = styled.button`
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    margin-right: 15px;
+    line-height: 0;
 `;
 
-const NavItem = styled.a`
-    color: #c70041;
-    font-size: 16px;
-    text-transform: uppercase;
+const IconMenu = styled(Icon)`
+    & path {
+        stroke: ${colors.primary};
+        transform: translate(-15px, -40px);
+        stroke-width: 3;
+    }
 `;
 
-const Navigation = () => {
-    return (
-        <nav>
-            <NavUl>
-                <NavList>
-                    <NavItem href="#">Peças</NavItem>
-                </NavList>
-                <NavList>
-                    <NavItem href="#">Serviços</NavItem>
-                </NavList>
-                <NavList>
-                    <NavItem href="#">Manutenção</NavItem>
-                </NavList>
-                <NavList>
-                    <NavItem href="#">Sistemas de troca</NavItem>
-                </NavList>
-            </NavUl>
-        </nav>
-    );
-};
+class Navigation extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            sidebarOpen: false,
+        };
+        this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+    }
+
+    onSetSidebarOpen(open) {
+        this.setState({ sidebarOpen: open });
+    }
+
+    render() {
+        return (
+            <NavigationFull>
+                <Sidebar
+                    sidebar={<CategoryList />}
+                    open={this.state.sidebarOpen}
+                    onSetOpen={this.onSetSidebarOpen}
+                    rootClassName={'menu-mobile-box'}
+                    styles={{ sidebar: { background: '#14214e' } }}
+                >
+                    &nbsp;
+                </Sidebar>
+                <MenuBtn className="menu-btn" onClick={() => this.onSetSidebarOpen(true)}>
+                    <IconMenu id="menu" iconFill="#14214e" iconWidth="20" iconHeight="20" />
+                </MenuBtn>
+            </NavigationFull>
+        );
+    }
+}
 
 export default Navigation;

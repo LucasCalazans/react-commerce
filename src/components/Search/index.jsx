@@ -4,14 +4,14 @@ import { Icon } from '../../components/Icons';
 
 const IconSearch = styled(Icon)`
     & path {
-        stroke: #000000;
+        stroke: #14214e;
         transform: translate(-1421px, -39px);
         stroke-width: 2;
     }
 `;
 
 const SearchIcon = () => {
-    return <IconSearch id="search" iconFill="#ffffff" iconWidth="34" iconHeight="34" />;
+    return <IconSearch id="search" iconFill="#ffffff" iconWidth="32" iconHeight="32" />;
 };
 
 export default SearchIcon;
