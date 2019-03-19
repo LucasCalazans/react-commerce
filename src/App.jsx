@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Title from './Title';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
-import { Icon } from './components/Icons';
+import { Icon } from './components/Icon';
 import Input from './components/Input';
-import Button from './components/Button';
+import Buttons from './components/index';
 import Alert from './components/Alert';
 
 const App = ({ className }) => {
@@ -31,9 +31,9 @@ const App = ({ className }) => {
 
             <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
 
-            <Button color="secondary" size="small">
+            <Buttons color="secondary" size="small">
                 Hello, World
-            </Button>
+            </Buttons>
         </main>
     );
 };
