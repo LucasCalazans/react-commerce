@@ -67,9 +67,16 @@ const icons = {
         viewBox: '0 0 30.225 30.224',
         iconName: 'Quarter Circle',
     },
+
+    star: {
+        path:
+            'M1024 397.050l-353.78-51.408-158.22-320.582-158.216 320.582-353.784 51.408 256 249.538-60.432 352.352 316.432-166.358 316.432 166.358-60.434-352.352 256.002-249.538z',
+        viewBox: '0 0 1024 1024 ',
+        iconName: 'Star',
+    },
 };
 
-export const Icon = props => {
+const Icon = props => {
     const iconFill = props.iconFill || 'black';
     const iconWidth = props.iconWidth || '34';
     const iconHeight = props.iconHeight || '34';
@@ -99,3 +106,5 @@ export const Icon = props => {
         </svg>
     );
 };
+
+export default Icon;
