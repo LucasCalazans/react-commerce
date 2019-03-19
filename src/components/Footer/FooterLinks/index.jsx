@@ -14,7 +14,7 @@ import {
     FooterImages,
 } from './styles';
 
-const FooterLinks = [
+const footerLinks = [
     {
         title: 'Categories',
         links: [
@@ -83,7 +83,7 @@ const FooterLinks = [
         links: [
             {
                 number: '080000000',
-                email: 'ajuda@scania.com.br',
+                email: 'ajuda@trucktransport.com.br',
                 emailicon: [<FooterImages src={email} height="20" width="20" />],
                 numbericon: [<FooterImages src={telephone} height="20" width="20" />],
                 img: [
@@ -101,13 +101,13 @@ const FooterLinks = [
 const MainFooter = () => {
     return (
         <FooterContainer>
-            {FooterLinks &&
-                FooterLinks.map((FooterLinks, index) => {
+            {footerLinks &&
+                footerLinks.map((footerLink, index) => {
                     return (
                         <dl key={index}>
-                            <FooterCategories key={index}>{FooterLinks.title}</FooterCategories>
-                            {FooterLinks.links &&
-                                FooterLinks.links.map((link, index) => {
+                            <FooterCategories>{footerLink.title}</FooterCategories>
+                            {footerLink.links &&
+                                footerLink.links.map((link, index) => {
                                     return (
                                         <dt key={index}>
                                             <CategoryLinks href={link.path}>

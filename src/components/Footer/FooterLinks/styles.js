@@ -10,7 +10,7 @@ const FooterContainer = styled.div`
     `}
 `;
 
-const FooterCategories = styled.h2`
+const FooterCategories = styled.dt`
     width: 152px;
     height: 20px;
     color: #14214e;
