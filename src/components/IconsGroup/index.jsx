@@ -6,14 +6,14 @@ import CartIcon from '../Icons/Cart';
 import SearchIcon from '../Icons/Search';
 
 const GroupCont = styled.div`
-    ${media.tablet`
-        margin-left: unset;
-        min-width: 140px;
-    `}
     margin-left: auto;
     & svg {
         margin-left: 10px;
     }
+    ${media.tablet`
+        margin-left: unset;
+        min-width: 140px;
+    `}
 `;
 
 const IconsGroup = () => (

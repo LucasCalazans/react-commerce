@@ -6,14 +6,13 @@ import CategoryList from '../../components/CategoryList';
 import { colors, sizes, media } from '../../helpers/styles';
 
 const NavigationFull = styled.div`
-    display: none;
-    @media (max-width: 767px) {
-        display: flex;
-    }
-
+    display: flex;
     & .menu-mobile-box {
         max-width: 80%;
     }
+    ${media.tablet`
+        display: none;
+    `}
 `;
 
 const MenuBtn = styled.button`
@@ -53,7 +52,7 @@ class Navigation extends React.Component {
                     sidebar={<CategoryList />}
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
-                    rootClassName={'menu-mobile-box'}
+                    rootClassName="menu-mobile-box"
                     styles={{ sidebar: { background: colors.primary } }}
                 >
                     &nbsp;
