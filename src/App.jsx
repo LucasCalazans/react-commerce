@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import { Icon } from './components/Icon';
 import Input from './components/Input';
-import Buttons from './components/index';
+import Button from './components/index';
 import Alert from './components/Alert';
 
 const App = ({ className }) => {
@@ -31,9 +31,9 @@ const App = ({ className }) => {
 
             <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
 
-            <Buttons color="secondary" size="small">
+            <Button color="secondary" size="small">
                 Hello, World
-            </Buttons>
+            </Button>
         </main>
     );
 };
