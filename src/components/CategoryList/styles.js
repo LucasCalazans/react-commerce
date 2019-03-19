@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, sizes, media, fonts } from '../../helpers/styles/index';
+import { colors, sizes, media, fonts } from '../../helpers/styles';
 import { Icon } from '../../components/Icons';
 
 const ChooseMenu = styled.li`
@@ -16,7 +16,7 @@ const ChooseMenu = styled.li`
 `;
 
 const ChooseMenuItem = styled.a`
-    color: ${({ active }) => (active ? '#ffffff' : '#b9b9b9')};
+    color: ${({ active }) => (active ? '#ffffff' : colors.alternativeLight)};
     font-size: ${sizes.xLarge}px;
     float: left;
     box-sizing: border-box;

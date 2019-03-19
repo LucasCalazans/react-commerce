@@ -1,17 +1,16 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { Icon } from '../../components/Icons';
+import { Icon } from './index';
+import { colors } from '../../helpers/styles';
 
 const IconCart = styled(Icon)`
     & path {
-        stroke: #14214e;
+        stroke: ${({ stroke }) => stroke || colors.primary};
         transform: translate(-1530px, -39px);
         stroke-width: 2;
     }
 `;
 
-const CartIcon = () => {
-    return <IconCart id="cart" iconFill="#ffffff" iconWidth="32" iconHeight="32" />;
-};
+const CartIcon = props => <IconCart {...props} id="cart" />;
 
 export default CartIcon;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Sidebar from 'react-sidebar';
 import { Icon } from '../../components/Icons';
 import CategoryList from '../../components/CategoryList';
-import { colors, sizes, media } from '../../helpers/styles/index';
+import { colors, sizes, media } from '../../helpers/styles';
 
 const NavigationFull = styled.div`
     display: none;
@@ -54,12 +54,17 @@ class Navigation extends React.Component {
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
                     rootClassName={'menu-mobile-box'}
-                    styles={{ sidebar: { background: '#14214e' } }}
+                    styles={{ sidebar: { background: colors.primary } }}
                 >
                     &nbsp;
                 </Sidebar>
                 <MenuBtn className="menu-btn" onClick={() => this.onSetSidebarOpen(true)}>
-                    <IconMenu id="menu" iconFill="#14214e" iconWidth="20" iconHeight="20" />
+                    <IconMenu
+                        id="menu"
+                        iconFill="${colors.primary}"
+                        iconWidth="20"
+                        iconHeight="20"
+                    />
                 </MenuBtn>
             </NavigationFull>
         );
