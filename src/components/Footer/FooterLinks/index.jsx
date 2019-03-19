@@ -105,7 +105,6 @@ const MainFooter = () => {
                 FooterLinks.map((FooterLinks, index) => {
                     return (
                         <dl key={index}>
-                            {' '}
                             <FooterCategories key={index}>{FooterLinks.title}</FooterCategories>
                             {FooterLinks.links &&
                                 FooterLinks.links.map((link, index) => {
@@ -114,17 +113,15 @@ const MainFooter = () => {
                                             <CategoryLinks href={link.path}>
                                                 {link.title}
                                             </CategoryLinks>
-                                            <div>
-                                                <SupportInfo>
-                                                    {link.numbericon}
-                                                    {link.number}
-                                                </SupportInfo>
-                                                <SupportInfo>
-                                                    {link.emailicon}
-                                                    {link.email}
-                                                </SupportInfo>
-                                                <div>{link.img}</div>
-                                            </div>
+                                            <SupportInfo>
+                                                {link.numbericon}
+                                                {link.number}
+                                            </SupportInfo>
+                                            <SupportInfo>
+                                                {link.emailicon}
+                                                {link.email}
+                                            </SupportInfo>
+                                            <div>{link.img}</div>
                                         </dt>
                                     );
                                 })}

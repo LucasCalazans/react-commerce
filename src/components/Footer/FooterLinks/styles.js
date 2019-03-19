@@ -1,12 +1,16 @@
-import React from 'react';
 import styled from 'styled-components';
+import { media } from '../../../helpers/styles/index';
 
-export const FooterContainer = styled.div`
-    display: flex;
+const FooterContainer = styled.div`
+    display: initial;
     justify-content: space-between;
+    padding: 10px 10px 10px 10px;
+    ${media.phoneLandscape`
+        display: flex;
+    `}
 `;
 
-export const FooterCategories = styled.h2`
+const FooterCategories = styled.h2`
     width: 152px;
     height: 20px;
     color: #14214e;
@@ -17,7 +21,7 @@ export const FooterCategories = styled.h2`
     text-transform: uppercase;
 `;
 
-export const CategoryLinks = styled.a`
+const CategoryLinks = styled.a`
     width: 169px;
     height: 68px;
     color: #707070;
@@ -28,7 +32,7 @@ export const CategoryLinks = styled.a`
     line-height: 24px;
 `;
 
-export const SupportInfo = styled.span`
+const SupportInfo = styled.span`
     width: 169px;
     height: 68px;
     color: #707070;
@@ -40,6 +44,8 @@ export const SupportInfo = styled.span`
     display: table-row-group;
 `;
 
-export const FooterImages = styled.img`
+const FooterImages = styled.img`
     padding-right: 10px;
 `;
+
+export { FooterContainer, FooterCategories, CategoryLinks, SupportInfo, FooterImages };
