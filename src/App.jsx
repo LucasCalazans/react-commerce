@@ -6,15 +6,12 @@ import { Icon } from './components/Icons';
 import Input from './components/Input';
 import Button from './components/Button';
 import Alert from './components/Alert';
-import Tooltip, { TooltipWrapper } from './components/Tooltip';
 
 const App = ({ className }) => {
     const [inputValue, setInputValue] = useState('');
     const onInputChange = ev => {
         setInputValue(ev.target.value);
     };
-
-    const [tooltipActive, tooltipHover] = useState(false);
 
     const [hasAlert, setHasAlert] = useState(true);
 
@@ -31,15 +28,6 @@ const App = ({ className }) => {
             <Title>React Commerce</Title>
 
             <Input placeholder="Type something" onChange={onInputChange} value={inputValue} />
-            <TooltipWrapper
-                onMouseOver={() => tooltipHover(true)}
-                onMouseOut={() => tooltipHover(false)}
-            >
-                <Icon id="question" iconFill="blue" iconWidth="42" iconHeight="42" />
-                <Tooltip active={tooltipActive} position="right">
-                    <span>Type something on this input</span>
-                </Tooltip>
-            </TooltipWrapper>
             <Icon id="home" iconFill="blue" iconWidth="42" iconHeight="42" />
 
             <Button color="secondary" size="small">

@@ -5,12 +5,12 @@ const position = ({ position }) => {
         case 'left':
             return `
                 top: 50%;
-                left: 120%;
+                right: 120%;
                 transform: translate(0,-50%);
                 &:after {
-                    left: -12px;
+                    right: -12px;
                     top: 50%;
-                    transform: translate(0,-50%) rotate(90deg);
+                    transform: translate(0,-50%) rotate(270deg);
                 }
             `;
         case 'bottom':
@@ -27,12 +27,12 @@ const position = ({ position }) => {
         case 'right':
             return `
                 top: 50%;
-                right: 120%;
+                left: 120%;
                 transform: translate(0,-50%);
                 &:after {
-                    right: -12px;
+                    left: -12px;
                     top: 50%;
-                    transform: translate(0,-50%) rotate(270deg);
+                    transform: translate(0,-50%) rotate(90deg);
                 }
             `;
         case 'top':
@@ -71,6 +71,7 @@ const Tooltip = styled.div`
 
 export const TooltipWrapper = styled.div`
     position: relative;
+    display: inline-block;
 `;
 
 export default Tooltip;
