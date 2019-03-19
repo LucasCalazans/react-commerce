@@ -52,7 +52,7 @@ class Rating extends Component {
                     onMouseOver={() => this.starHover(i)}
                     onMouseOut={this.starOut}
                     key={i}
-                    className={this.props.value ? 'fixed' : ''}
+                    isFixed={!!this.props.value}
                 >
                     <Icon id="star" iconFill={fill} iconWidth="28" iconHeight="28" />
                 </Star>,
