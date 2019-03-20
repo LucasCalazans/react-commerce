@@ -10,7 +10,7 @@ const FooterContainer = styled.div`
     `}
 `;
 
-const FooterCategories = styled.dt`
+const FooterTitle = styled.dt`
     width: 152px;
     height: 20px;
     color: #14214e;
@@ -44,8 +44,8 @@ const SupportInfo = styled.span`
     display: table-row-group;
 `;
 
-const FooterImages = styled.img`
+const FooterImage = styled.img`
     padding-right: 10px;
 `;
 
-export { FooterContainer, FooterCategories, CategoryLinks, SupportInfo, FooterImages };
+export { FooterContainer, FooterTitle, CategoryLinks, SupportInfo, FooterImage };

@@ -6,13 +6,7 @@ import paypal from './icons/paypal.svg';
 import visa from './icons/visa.svg';
 import telephone from './icons/telephone.svg';
 import email from './icons/email.svg';
-import {
-    FooterContainer,
-    FooterCategories,
-    CategoryLinks,
-    SupportInfo,
-    FooterImages,
-} from './styles';
+import { FooterContainer, FooterTitle, CategoryLinks, SupportInfo, FooterImage } from './styles';
 
 const footerLinks = [
     {
