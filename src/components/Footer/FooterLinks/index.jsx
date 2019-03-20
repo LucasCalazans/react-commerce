@@ -84,14 +84,14 @@ const footerLinks = [
             {
                 number: '080000000',
                 email: 'ajuda@trucktransport.com.br',
-                emailicon: [<FooterImages src={email} height="20" width="20" />],
-                numbericon: [<FooterImages src={telephone} height="20" width="20" />],
+                emailicon: [<FooterImage src={email} height="20" width="20" />],
+                numbericon: [<FooterImage src={telephone} height="20" width="20" />],
                 img: [
-                    <FooterImages width="30" height="30" src={boleto} />,
-                    <FooterImages width="30" height="30" src={elo} />,
-                    <FooterImages width="30" height="30" src={mastercard} />,
-                    <FooterImages width="30" height="30" src={paypal} />,
-                    <FooterImages width="30" height="30" src={visa} />,
+                    <FooterImage width="30" height="30" src={boleto} />,
+                    <FooterImage width="30" height="30" src={elo} />,
+                    <FooterImage width="30" height="30" src={mastercard} />,
+                    <FooterImage width="30" height="30" src={paypal} />,
+                    <FooterImage width="30" height="30" src={visa} />,
                 ],
             },
         ],
@@ -105,7 +105,7 @@ const MainFooter = () => {
                 footerLinks.map((footerLink, index) => {
                     return (
                         <dl key={index}>
-                            <FooterCategories>{footerLink.title}</FooterCategories>
+                            <FooterTitle>{footerLink.title}</FooterTitle>
                             {footerLink.links &&
                                 footerLink.links.map((link, index) => {
                                     return (
