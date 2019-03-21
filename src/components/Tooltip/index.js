@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../helpers/styles';
 
 const position = ({ position }) => {
     switch (position) {
@@ -55,8 +56,8 @@ const Tooltip = styled.div`
     position: absolute;
     min-width: 108px;
     font-size: 14px;
-    background: #111;
-    color: #ffff;
+    background: ${colors.black};
+    color: ${colors.white};
     border-radius: 8px;
     padding: 5px;
     ${position}
@@ -64,7 +65,7 @@ const Tooltip = styled.div`
         content: '';
         position: absolute;
         border: 8px solid transparent;
-        border-top-color: #111;
+        border-top-color: ${colors.black};
         border-bottom: 0;
     }
 `;
