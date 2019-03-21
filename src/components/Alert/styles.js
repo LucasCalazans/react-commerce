@@ -6,7 +6,7 @@ export default styled.div`
     border: 1px solid;
     border-radius: 4px;
     padding: 15px;
-    width: 1200px;
+    width: 95%;
     position: fixed;
     top: 6%;
     color: ${props => props.current.color};

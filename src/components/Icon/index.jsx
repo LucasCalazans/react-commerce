@@ -1,6 +1,6 @@
 import React from 'react';
 
-const icons = {
+const icon = {
     home: {
         path:
             'M1024 590.444l-512-397.426-512 397.428v-162.038l512-397.426 512 397.428zM896 576v384h-256v-256h-256v256h-256v-384l384-288z',
@@ -45,11 +45,11 @@ export const Icon = props => {
 
     return (
         <svg
-            className={icons[props.id].iconName}
+            className={icon[props.id].iconName}
             xmlns="http://www.w3.org/2000/svg"
             width={iconWidth}
             height={iconHeight}
-            viewBox={icons[props.id].viewBox}
+            viewBox={icon[props.id].viewBox}
             aria-labelledby="title"
         >
             <animateTransform
@@ -62,8 +62,8 @@ export const Icon = props => {
                 begin="0s"
                 repeatCount="indefinite"
             />
-            <title id="title">{icons[props.id].iconName}</title>
-            <path fill={iconFill} d={icons[props.id].path} />
+            <title id="title">{icon[props.id].iconName}</title>
+            <path fill={iconFill} d={icon[props.id].path} />
         </svg>
     );
 };
