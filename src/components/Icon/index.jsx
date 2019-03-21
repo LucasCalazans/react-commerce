@@ -1,6 +1,45 @@
 import React from 'react';
 
-const icon = {
+const icons = {
+    arrowup: {
+        path: 'M259.9,102.7l-4.9-5.2l-4.9,5.2',
+        viewBox: '0 0 12 8',
+        iconName: 'ArrowUp',
+    },
+
+    arrowdown: {
+        path: 'M250 97.5l4.938 5.153 4.938-5.153',
+        viewBox: '0 0 12 8',
+        iconName: 'ArrowDown',
+    },
+
+    menu: {
+        path: 'M15 42h20 M15 49h20 M15 56h20',
+        viewBox: '0 0 20 18',
+        iconName: 'Menu',
+    },
+
+    cart: {
+        path:
+            'M1535.276 45.7h25.14c1.753 0 3.107 1.583 2.808 3.321l-2.081 9.763a1.42 1.42 0 0 1-1.397 1.169h-20.908 M1539.551 69.929a2.85 2.85 0 1 1 5.7 0 2.85 2.85 0 0 1-5.7 0z M1555.228 69.929a2.85 2.85 0 1 1 5.701 0 2.85 2.85 0 0 1-5.7 0z M1531 40c2.85 0 2.85 1.425 4.276 5.7l4.275 17.103c.141.657.48 1.425 1.152 1.425h20.226',
+        viewBox: '0 0 35 35',
+        iconName: 'Cart',
+    },
+
+    search: {
+        path:
+            'M1422 53.21c0-7.296 5.914-13.21 13.21-13.21 7.294 0 13.208 5.914 13.208 13.21 0 7.294-5.914 13.208-13.209 13.208S1422 60.504 1422 53.21z M1455.757 73.756l-11.213-11.213',
+        viewBox: '0 0 36 36',
+        iconName: 'Search',
+    },
+
+    account: {
+        path:
+            'M1477 56.798c0-8.725 7.073-15.798 15.798-15.798s15.798 7.073 15.798 15.798-7.073 15.798-15.798 15.798S1477 65.523 1477 56.798z M1497.107 53.767c0 2.467-1.93 4.467-4.309 4.467-2.38 0-4.309-2-4.309-4.467v-2.554c0-2.468 1.93-4.468 4.31-4.468 2.379 0 4.308 2 4.308 4.468z M1482.27 68.575c1.767-3.547 5.817-6.032 10.528-6.032 4.71 0 8.76 2.485 10.527 6.032',
+        viewBox: '0 0 34 34',
+        iconName: 'Account',
+    },
+
     home: {
         path:
             'M1024 590.444l-512-397.426-512 397.428v-162.038l512-397.426 512 397.428zM896 576v384h-256v-256h-256v256h-256v-384l384-288z',
@@ -28,9 +67,16 @@ const icon = {
         viewBox: '0 0 30.225 30.224',
         iconName: 'Quarter Circle',
     },
+
+    star: {
+        path:
+            'M1024 397.050l-353.78-51.408-158.22-320.582-158.216 320.582-353.784 51.408 256 249.538-60.432 352.352 316.432-166.358 316.432 166.358-60.434-352.352 256.002-249.538z',
+        viewBox: '0 0 1024 1024 ',
+        iconName: 'Star',
+    },
 };
 
-export const Icon = props => {
+const Icon = props => {
     const iconFill = props.iconFill || 'black';
     const iconWidth = props.iconWidth || '34';
     const iconHeight = props.iconHeight || '34';
@@ -38,11 +84,11 @@ export const Icon = props => {
 
     return (
         <svg
-            className={icon[props.id].iconName}
+            className={`${icons[props.id].iconName} ${props.className}`}
             xmlns="http://www.w3.org/2000/svg"
             width={iconWidth}
             height={iconHeight}
-            viewBox={icon[props.id].viewBox}
+            viewBox={icons[props.id].viewBox}
             aria-labelledby="title"
         >
             <animateTransform
@@ -55,8 +101,10 @@ export const Icon = props => {
                 begin="0s"
                 repeatCount="indefinite"
             />
-            <title id="title">{icon[props.id].iconName}</title>
-            <path fill={iconFill} d={icon[props.id].path} />
+            <title id="title">{icons[props.id].iconName}</title>
+            <path fill={iconFill} d={icons[props.id].path} />
         </svg>
     );
 };
+
+export default Icon;

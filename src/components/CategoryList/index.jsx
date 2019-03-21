@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavItem, NavList, NavUl, ChooseMenuItem, ChooseMenu, IconArrow } from './styles';
-import { Icon } from '../../components/Icons';
+import { Icon } from '../Icon';
 
 const itensMenu = [
     {

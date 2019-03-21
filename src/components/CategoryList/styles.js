@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { colors, sizes, media, fonts } from '../../helpers/styles';
-import { Icon } from '../../components/Icons';
+import Icon from '../Icon';
 
 const ChooseMenu = styled.li`
     padding: 20px 10px 0px;

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, media } from '../../helpers/styles';
-import AccountIcon from '../Icons/Account';
-import CartIcon from '../Icons/Cart';
-import SearchIcon from '../Icons/Search';
+import { media } from '../../helpers/styles';
+import AccountIcon from '../Icon/Account';
+import CartIcon from '../Icon/Cart';
+import SearchIcon from '../Icon/Search';
 
 const GroupCont = styled.div`
     margin-left: auto;

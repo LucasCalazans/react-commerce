@@ -1,18 +1,16 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { Icon } from './index';
+import Icon from './index';
 import { colors } from '../../helpers/styles';
 
-const LogoAccount = styled(Icon)`
+const IconCart = styled(Icon)`
     & path {
         stroke: ${({ stroke }) => stroke || colors.primary};
-        transform: translate(-1476px, -40px);
+        transform: translate(-1530px, -39px);
         stroke-width: 2;
     }
 `;
 
-const AccountIcon = props => {
-    return <LogoAccount {...props} id="account" />;
-};
+const CartIcon = props => <IconCart {...props} id="cart" />;
 
-export default AccountIcon;
+export default CartIcon;
