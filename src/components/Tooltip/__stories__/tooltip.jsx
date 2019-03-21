@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import Tooltip, { TooltipWrapper } from '../index';
-import { Icon } from '../../Icons';
+import Icon from '../../Icon';
 import { colors } from '../../../helpers/styles';
 
 const stories = storiesOf('Tooltip', module);
