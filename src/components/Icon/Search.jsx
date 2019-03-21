@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icon } from './index';
+import Icon from './index';
 import { colors } from '../../helpers/styles';
 
 const IconSearch = styled(Icon)`

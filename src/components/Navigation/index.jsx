@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Sidebar from 'react-sidebar';
-import { Icon } from '../../components/Icons';
-import CategoryList from '../../components/CategoryList';
-import { colors, sizes, media } from '../../helpers/styles';
+import Icon from '../Icon';
+import CategoryList from '../CategoryList';
+import { colors, media } from '../../helpers/styles';
 
 const NavigationFull = styled.div`
     display: flex;
