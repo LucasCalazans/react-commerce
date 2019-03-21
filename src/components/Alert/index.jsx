@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AlertWrapper, { Button } from './styles';
-import { Icon } from '../Icon';
+import Icon from '../Icon';
 
 const TYPES = {
     info: {
