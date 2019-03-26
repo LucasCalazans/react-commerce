@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Toggle = () => {
-    return <div />;
-};
+class FooterMobile extends Component {
+    render() {
+        return <div />;
+    }
+}
 
-export default Toggle;
+export default FooterMobile;
