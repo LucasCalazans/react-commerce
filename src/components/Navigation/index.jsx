@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Sidebar from 'react-sidebar';
-import Icon from '../../components/Icon';
+import Icon from '../Icon';
 import CategoryList from '../../containers/CategoryList';
 import { colors, sizes, media } from '../../helpers/styles';
 
