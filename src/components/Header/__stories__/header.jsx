@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Header from '../index';
 import Logo from '../../Logo';
-import Topmenu from '../../Topmenu';
+import Topmenu from '../../../containers/Topmenu';
 import IconsGroup from '../../IconsGroup';
 
 const stories = storiesOf('Header', module);
