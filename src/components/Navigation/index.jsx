@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Sidebar from 'react-sidebar';
-import Icon from '../Icon';
-import CategoryList from '../CategoryList';
-import { colors, media } from '../../helpers/styles';
+import Icon from '../../components/Icon';
+import CategoryList from '../../containers/CategoryList';
+import { colors, sizes, media } from '../../helpers/styles';
 
 const NavigationFull = styled.div`
     display: flex;
+    order: 1;
     & .menu-mobile-box {
         max-width: 80%;
     }
@@ -49,7 +50,7 @@ class Navigation extends React.Component {
         return (
             <NavigationFull>
                 <Sidebar
-                    sidebar={<CategoryList />}
+                    sidebar={<CategoryList categories={this.props.categories} />}
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
                     rootClassName="menu-mobile-box"
