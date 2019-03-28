@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, sizes, media, fonts } from '../../helpers/styles';
+import { colors, sizes, media } from '../../helpers/styles';
 import Icon from '../../components/Icon';
 
 const ChooseMenu = styled.li`

@@ -21,7 +21,7 @@ const MenuBtn = styled.button`
     border: none;
     cursor: pointer;
     position: relative;
-    margin-right: 15px;
+    margin-right: ${sizes.small}px;
     line-height: 0;
 `;
 

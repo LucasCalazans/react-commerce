@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import styled from 'styled-components';
 import Navigation from '../../components/Navigation';
-import { colors, media } from '../../helpers/styles';
+import { media } from '../../helpers/styles';
 import CategoryList from '../CategoryList';
 
 const MenuCont = styled.div`

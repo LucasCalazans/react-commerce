@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, media } from '../../helpers/styles';
+import { media } from '../../helpers/styles';
 import logoImg from '../../assets/images/logo.svg';
 
 const LogoCont = styled.div`
