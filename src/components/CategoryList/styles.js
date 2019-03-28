@@ -17,7 +17,7 @@ const ChooseMenu = styled.li`
 
 const ChooseMenuItem = styled.a`
     color: ${({ active }) => (active ? '#ffffff' : colors.alternativeLight)};
-    font-size: ${sizes.xLarge}px;
+    font-size: ${sizes.xLarge};
     float: left;
     box-sizing: border-box;
     padding: 0 20px 10px;
@@ -74,7 +74,7 @@ const NavList = styled.li`
 `;
 
 const NavItem = styled.a`
-    font-size: ${sizes.medium}px;
+    font-size: ${sizes.medium};
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
@@ -86,11 +86,11 @@ const NavItem = styled.a`
 
     ${media.tablet`
     	color: ${colors.secondary};
-        font-size: ${sizes.small}px;
+        font-size: ${sizes.small};
     `}
 
     ${media.tabletLandscape`
-        font-size: ${sizes.medium}px;
+        font-size: ${sizes.medium};
     `}
 `;
 

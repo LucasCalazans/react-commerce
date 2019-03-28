@@ -4,5 +4,6 @@ import Button from './Button';
 import Icon from './Icon';
 import Input from './Input';
 import Loader from './Loader';
+import { Modal, ModalButtons, ModalContent, ModalHeader } from './Modal';
 
-export { Alert, Form, Button, Icon, Input, Loader };
+export { Alert, Form, Button, Icon, Input, Loader, Modal, ModalButtons, ModalContent, ModalHeader };
