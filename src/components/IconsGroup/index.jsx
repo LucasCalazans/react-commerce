@@ -7,6 +7,7 @@ import SearchIcon from '../Icon/Search';
 
 const GroupCont = styled.div`
     margin-left: auto;
+    order: 4;
     & svg {
         margin-left: 10px;
     }
