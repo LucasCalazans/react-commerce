@@ -5,5 +5,5 @@ import Button from '../index';
 const stories = storiesOf('Button', module);
 
 stories.add('Button', () => {
-    return <Button color="tertiary">Hello World</Button>;
+    return <Button color="alternativeLight">Hello World</Button>;
 });

@@ -11,7 +11,7 @@ const getBackgroundColor = ({ color, hover }) => {
         case 'alternative':
             return colors.alternative;
         case 'alternativeLight':
-            return colors.alternativeLight;
+            return !hover ? colors.alternativeLight : '#14214e';
         case 'success':
             return colors.success;
         case 'danger':
@@ -20,6 +20,15 @@ const getBackgroundColor = ({ color, hover }) => {
             return colors.warning;
         default:
             return !hover ? colors.primary : '#c70041';
+    }
+};
+const getFontColor = ({ color, hover }) => {
+    switch (color) {
+        case 'alternativeLight':
+            console.log('Funfou');
+            return !hover ? '#14214e;' : '#FFFFFF';
+        default:
+            return '#FFFFFF';
     }
 };
 const size = ({ size }) => {
@@ -58,13 +67,16 @@ export default styled.button`
     text-transform: uppercase;
     border: 0;
     background-color: ${getBackgroundColor};
-    color: #ffffff;
+    color: ${getFontColor};
     font-weight: 800;
     line-height: 20px;
     height: ${size}px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+
     &:hover {
         background-color: ${({ color }) => getBackgroundColor({ color, hover: true })};
+        color: ${({ color }) => getFontColor({ color, hover: true })};
     }
 `;
