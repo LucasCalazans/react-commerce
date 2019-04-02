@@ -6,13 +6,15 @@ export const Modal = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        /* border: 1px solid red; */
-        height: 96.5vh;
+        background-color: #fff;
+        height: 100vh;
+        width: 100%;
+        position: relative;
     `}
     ${media.tablet`
         height: auto;
         border-radius: 15px;
-        box-shadow: 0 2px 20px #ccc;
+        box-shadow: 0 2px 20px #555;
         margin: 20% auto;
     `}
     ${media.tabletLandscape`
@@ -23,7 +25,6 @@ export const Modal = styled.div`
         width: 50%;
         margin: 12% auto;
     `}
-    
 `;
 
 export const ModalHeader = styled.header`
@@ -41,9 +42,6 @@ export const ModalHeader = styled.header`
             top: 60px;
         }
     `}
-    ${media.tablet`
-       
-    `}
 `;
 
 export const ModalContent = styled.div`
@@ -56,12 +54,13 @@ export const ModalContent = styled.div`
     `}
 `;
 
-export const ModalButtons = styled.div`
+export const ModalFooter = styled.div`
     ${media.phone`
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
         position: relative;
+        margin-bottom: ${sizes.small}
         button {
             margin-right: ${sizes.medium};
         }

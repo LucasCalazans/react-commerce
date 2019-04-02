@@ -1,7 +1,7 @@
 import React from 'react';
-import Icon from '../Icon';
-import { Overlay } from './styles';
 import { colors, sizes } from '../../helpers/styles';
+import Icon from '../Icon';
+import { Overlay } from '../index';
 
 const Loader = ({
     type = 'default',
@@ -12,7 +12,7 @@ const Loader = ({
     loading = false,
 }) => {
     return !loading ? null : (
-        <Overlay type={type}>
+        <Overlay type={type} padding="25px">
             <Icon
                 id={icon}
                 iconFill={colors[color]}
