@@ -1,8 +1,14 @@
 import styled from 'styled-components';
-
+import { media } from '../../helpers/styles/index';
 export const FooterCopyright = styled.div`
     position: absolute;
-    padding: 0 0 0 30%;
+    ${media.phone`
+        display:flex
+        padding: 0 0 0 10%;
+    `}
+    ${media.tablet`
+        padding: 0 0 0 30%;
+    `}
 `;
 
 export const FooterCopyrightPhrase = styled.div`

@@ -7,6 +7,15 @@ import visa from './icons/visa.svg';
 import telephone from './icons/telephone.svg';
 import email from './icons/email.svg';
 import { FooterContainer, FooterTitle, CategoryLinks, SupportInfo, FooterImage } from './styles';
+import styled from 'styled-components';
+import media from '../../../helpers/styles/mediaQuery';
+import Dropdown from '../../Dropdown';
+
+const DropdownContainer = styled.div`
+    ${media.phoneLandscape`
+        display:none;
+    `}
+`;
 
 const footerLinks = [
     {
@@ -100,6 +109,9 @@ const MainFooter = () => {
                     return (
                         <dl key={index}>
                             <FooterTitle>{footerLink.title}</FooterTitle>
+                            <DropdownContainer>
+                                <Dropdown link={footerLink} />
+                            </DropdownContainer>
                             {footerLink.links &&
                                 footerLink.links.map((link, index) => {
                                     return (

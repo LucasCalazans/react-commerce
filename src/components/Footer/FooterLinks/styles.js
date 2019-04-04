@@ -4,9 +4,9 @@ import { media } from '../../../helpers/styles/index';
 const FooterContainer = styled.div`
     display: initial;
     justify-content: space-between;
-    padding: 10px 10px 10px 10px;
     ${media.phoneLandscape`
         display: flex;
+        padding: 0;
     `}
 `;
 
@@ -19,6 +19,12 @@ const FooterTitle = styled.dt`
     font-weight: 700;
     letter-spacing: 1.6px;
     text-transform: uppercase;
+    ${media.phone`
+        display: none;
+    `}
+    ${media.phoneLandscape`
+        display: initial;
+    `}
 `;
 
 const CategoryLinks = styled.a`
@@ -30,6 +36,13 @@ const CategoryLinks = styled.a`
     font-weight: 400;
     letter-spacing: 1.6px;
     line-height: 24px;
+    ${media.phone`
+
+        display: none;
+    `}
+    ${media.phoneLandscape`
+        display: initial;
+    `}
 `;
 
 const SupportInfo = styled.span`
@@ -42,10 +55,19 @@ const SupportInfo = styled.span`
     letter-spacing: 1.6px;
     line-height: 24px;
     display: table-row-group;
+    ${media.phone`
+        display: none;
+    `}
+    ${media.phoneLandscape`
+        display: initial;
+    `}
 `;
 
 const FooterImage = styled.img`
     padding-right: 10px;
+    ${media.phone`
+        margin-top:4%;
+    `}
 `;
 
 export { FooterContainer, FooterTitle, CategoryLinks, SupportInfo, FooterImage };
