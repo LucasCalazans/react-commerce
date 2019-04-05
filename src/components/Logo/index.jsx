@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, media } from '../../helpers/styles';
+import { media } from '../../helpers/styles';
 import logoImg from '../../assets/images/logo.svg';
 
 const LogoCont = styled.div`
     max-width: 90px;
     max-height: 62px;
-
+    order: 2;
     & img {
         max-width: 100%;
     }
