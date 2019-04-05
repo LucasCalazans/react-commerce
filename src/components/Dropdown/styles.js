@@ -24,12 +24,26 @@ const Link = styled.a`
     line-height: 24px;
 `;
 
+const DropdownContent = styled.div`
+    position: relative;
+`;
+
 const IconArrow = styled(Icon)`
     & path {
         stroke: #c70041;
         transform: translate(-249px, -96px);
         stroke-width: 1;
     }
+
+    position: absolute;
+    top: 0;
+    right: 15%;
+
+    ${media.phoneLandscape`
+        right:35%;
+     
+     `}
+
     ${media.tablet`
         & path {
             stroke: ${colors.secondary};
@@ -38,4 +52,4 @@ const IconArrow = styled(Icon)`
     `}
 `;
 
-export { Title, Link, IconArrow };
+export { Title, Link, DropdownContent, IconArrow };

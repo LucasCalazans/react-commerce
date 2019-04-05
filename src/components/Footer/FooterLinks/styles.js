@@ -67,6 +67,7 @@ const FooterImage = styled.img`
     padding-right: 13%;
     width: 60px;
     height: 60px;
+    margin-top: 20px;
     ${media.phoneLandscape`
         padding-right: 10px;
         margin-top:4%;
