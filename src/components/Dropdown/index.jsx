@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, Link } from './styles';
+import { Title, Link, IconArrow } from './styles';
 class Dropdown extends React.Component {
     constructor(props) {
         super(props);
@@ -31,6 +31,12 @@ class Dropdown extends React.Component {
             <div className="dropdown">
                 <Title className="button" onClick={this.showDropdownMenu}>
                     {this.props.link.title}
+                    <IconArrow
+                        id={this.state.displayMenu ? 'arrowup' : 'arrowdown'}
+                        iconFill="#c70041"
+                        iconWidth="15"
+                        iconHeight="11"
+                    />
                 </Title>
                 {links &&
                     links.map((link, index) => {

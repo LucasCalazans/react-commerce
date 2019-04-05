@@ -64,10 +64,36 @@ const SupportInfo = styled.span`
 `;
 
 const FooterImage = styled.img`
-    padding-right: 10px;
-    ${media.phone`
+    padding-right: 13%;
+    width: 60px;
+    height: 60px;
+    ${media.phoneLandscape`
+        padding-right: 10px;
         margin-top:4%;
+        width : 30px; 
+        height: 30px;
     `}
 `;
 
-export { FooterContainer, FooterTitle, CategoryLinks, SupportInfo, FooterImage };
+const FooterIcon = styled.img`
+    padding-right: 10px;
+`;
+
+const BorderDiv = styled.div`
+    width: 290px;
+    height: 1px;
+    background-color: #14214e;
+    opacity: 0.93;
+    ${media.phoneLandscape`
+        display:none;
+    `}
+`;
+export {
+    FooterContainer,
+    FooterTitle,
+    CategoryLinks,
+    SupportInfo,
+    FooterImage,
+    FooterIcon,
+    BorderDiv,
+};

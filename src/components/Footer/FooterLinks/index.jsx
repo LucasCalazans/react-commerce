@@ -1,12 +1,21 @@
 import React from 'react';
 import boleto from './icons/boleto.svg';
 import elo from './icons/elo.svg';
+import americanexpress from './icons/american-express.svg';
 import mastercard from './icons/mastercard.svg';
 import paypal from './icons/paypal.svg';
 import visa from './icons/visa.svg';
 import telephone from './icons/telephone.svg';
 import email from './icons/email.svg';
-import { FooterContainer, FooterTitle, CategoryLinks, SupportInfo, FooterImage } from './styles';
+import {
+    FooterContainer,
+    FooterTitle,
+    CategoryLinks,
+    SupportInfo,
+    FooterImage,
+    FooterIcon,
+    BorderDiv,
+} from './styles';
 import styled from 'styled-components';
 import media from '../../../helpers/styles/mediaQuery';
 import Dropdown from '../../Dropdown';
@@ -87,14 +96,15 @@ const footerLinks = [
             {
                 number: '080000000',
                 email: 'ajuda@trucktransport.com.br',
-                emailicon: [<FooterImage src={email} height="20" width="20" />],
-                numbericon: [<FooterImage src={telephone} height="20" width="20" />],
+                emailicon: [<FooterIcon src={email} height="20" width="20" />],
+                numbericon: [<FooterIcon src={telephone} height="20" width="20" />],
                 img: [
-                    <FooterImage width="30" height="30" src={boleto} />,
-                    <FooterImage width="30" height="30" src={elo} />,
-                    <FooterImage width="30" height="30" src={mastercard} />,
-                    <FooterImage width="30" height="30" src={paypal} />,
-                    <FooterImage width="30" height="30" src={visa} />,
+                    <FooterImage src={boleto} />,
+                    <FooterImage src={elo} />,
+                    <FooterImage src={americanexpress} />,
+                    <FooterImage src={mastercard} />,
+                    <FooterImage src={paypal} />,
+                    <FooterImage src={visa} />,
                 ],
             },
         ],
@@ -111,6 +121,7 @@ const MainFooter = () => {
                             <FooterTitle>{footerLink.title}</FooterTitle>
                             <DropdownContainer>
                                 <Dropdown link={footerLink} />
+                                <BorderDiv />
                             </DropdownContainer>
                             {footerLink.links &&
                                 footerLink.links.map((link, index) => {
