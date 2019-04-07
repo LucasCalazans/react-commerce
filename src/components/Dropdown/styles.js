@@ -37,7 +37,7 @@ const IconArrow = styled(Icon)`
 
     position: absolute;
     top: 0;
-    right: 15%;
+    right: 18%;
 
     ${media.phoneLandscape`
         right:35%;

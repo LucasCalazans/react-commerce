@@ -54,12 +54,11 @@ const SupportInfo = styled.span`
     font-weight: 400;
     letter-spacing: 1.6px;
     line-height: 24px;
-    display: table-row-group;
     ${media.phone`
         display: none;
     `}
     ${media.phoneLandscape`
-        display: initial;
+        display: table-row-group;
     `}
 `;
 
