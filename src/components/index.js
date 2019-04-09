@@ -4,5 +4,6 @@ import Button from './Button';
 import Icon from './Icon';
 import Input from './Input';
 import Loader from './Loader';
+import ImgBlock from './Gallery';
 
-export { Alert, Form, Button, Icon, Input, Loader };
+export { Alert, Form, Button, Icon, Input, Loader, ImgBlock };
