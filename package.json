@@ -37,6 +37,7 @@
         "babel-loader": "^8.0.4",
         "babel-plugin-styled-components": "^1.10.0",
         "clean-webpack-plugin": "^1.0.1",
+        "copy-webpack-plugin": "^5.0.2",
         "enzyme": "^3.7.0",
         "enzyme-adapter-react-16": "^1.7.0",
         "file-loader": "^1.1.11",
@@ -55,7 +56,7 @@
         "webpack-cli": "2.1.4",
         "webpack-dev-server": "^3.1.14"
     },
-    "homepage": "https://lucascalazans.github.io/react-commerce",
+    "homepage": "https://lucascalazans.github.io/react-commerce/",
     "husky": {
         "hooks": {
             "pre-commit": "pretty-quick --staged"
