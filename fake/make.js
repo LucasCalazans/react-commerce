@@ -35,8 +35,15 @@ const randomGallery = () => {
     return new Array(6).fill(null).map(e => (e = faker.image.imageUrl()));
 };
 
+const discounts = [10, 15, 30, 55];
+
+const getSpecialPrice = price => {
+    const index = Math.floor(Math.random() * discounts.length);
+    return price - (price * discounts[index]) / 100;
+};
+
 for (let i = 1; i <= qty.products; i++) {
-    data.products.push({
+    const product = {
         id: i + 1,
         title: faker.commerce.productName(),
         qty: Math.floor(Math.random() * 1000),
@@ -47,7 +54,13 @@ for (let i = 1; i <= qty.products; i++) {
         gallery: randomGallery(),
         categories: randomCategory(),
         related: randomProducts(),
-    });
+    };
+
+    if (Math.random() >= 0.8) {
+        product.special_price = getSpecialPrice(product.price);
+    }
+
+    data.products.push(product);
 }
 
 for (let i = 1; i <= qty.categories; i++) {

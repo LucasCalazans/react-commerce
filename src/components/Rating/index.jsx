@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { func } from 'prop-types';
-import Icon from '../../components/Icons';
+import Icon from '../Icon';
 import { Star } from './styles';
 
 class Rating extends Component {

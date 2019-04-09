@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, btnSizes } from '../helpers/styles';
+import { colors, btnSizes } from '../../helpers/styles';
 
 const color = ({ color }) => {
     switch (color) {
