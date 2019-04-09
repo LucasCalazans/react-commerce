@@ -19,6 +19,7 @@ import {
 import styled from 'styled-components';
 import media from '../../../helpers/styles/mediaQuery';
 import Dropdown from '../../Dropdown';
+import { DropdownContent, Link } from '../../Dropdown/styles';
 
 const DropdownContainer = styled.div`
     ${media.phoneLandscape`
@@ -32,19 +33,19 @@ const footerLinks = [
         links: [
             {
                 title: 'Peças',
-                path: 'xxx',
+                path: 'pecas',
             },
             {
                 title: 'Serviços',
-                path: 'xxx',
+                path: 'servicos',
             },
             {
                 title: 'Manutenção',
-                path: 'xxx',
+                path: 'manutencao',
             },
             {
                 title: 'Sistema de Trocas',
-                path: 'xxx',
+                path: 'sistema-de-trocas',
             },
         ],
     },
@@ -53,15 +54,15 @@ const footerLinks = [
         links: [
             {
                 title: 'Quem Somos',
-                path: 'xxx',
+                path: 'quem-somos',
             },
             {
                 title: 'Nosso Historia',
-                path: 'xxx',
+                path: 'nosso-historia',
             },
             {
                 title: 'Trabalhe Conosco',
-                path: 'xxx',
+                path: 'trabalhe-conosco',
             },
         ],
     },
@@ -70,15 +71,15 @@ const footerLinks = [
         links: [
             {
                 title: 'Política de Privacidade',
-                path: 'xxx',
+                path: 'politica-de-privacidade',
             },
             {
                 title: 'Política de Troca',
-                path: 'xxx',
+                path: 'politica-de-troca',
             },
             {
                 title: 'Termos e Condições',
-                path: 'xxx',
+                path: 'termos-e-condicoes',
             },
             {
                 title: 'FAQ',
@@ -86,7 +87,7 @@ const footerLinks = [
             },
             {
                 title: 'Fale Conosco',
-                path: 'xxx',
+                path: 'fale-conosco',
             },
         ],
     },
@@ -120,7 +121,22 @@ const MainFooter = () => {
                         <dl key={index}>
                             <FooterTitle>{footerLink.title}</FooterTitle>
                             <DropdownContainer>
-                                <Dropdown link={footerLink} />
+                                <Dropdown title={footerLink.title}>
+                                    {footerLink.links &&
+                                        footerLink.links.map((link, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    <Link href={link.path}>{link.title}</Link>
+                                                    <span>
+                                                        {link.numbericon} {link.number}
+                                                    </span>
+                                                    <span>
+                                                        {link.emailicon} {link.email}
+                                                    </span>
+                                                </div>
+                                            );
+                                        })}
+                                </Dropdown>
                                 <BorderDiv />
                             </DropdownContainer>
                             {footerLink.links &&

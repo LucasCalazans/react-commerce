@@ -52,4 +52,6 @@ const IconArrow = styled(Icon)`
     `}
 `;
 
-export { Title, Link, DropdownContent, IconArrow };
+const ContentTitle = styled.div``;
+
+export { Title, Link, DropdownContent, ContentTitle, IconArrow };
