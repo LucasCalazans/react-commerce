@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Navigation from '../../components/Navigation';
 import { media } from '../../helpers/styles';
 import CategoryList from '../CategoryList';
+import BaseApi from '../../api/BaseApi';
 
 const MenuCont = styled.div`
     margin: 0 auto;
@@ -23,7 +24,8 @@ class Topmenu extends Component {
     };
 
     getCategories = async () => {
-        const response = await fetch('http://localhost:3100/categories?_limit=4');
+        const url = BaseApi.getUrl('categories?_limit=4');
+        const response = await fetch(url);
         const categories = await response.json();
         this.setState(() => ({ categories }));
     };
