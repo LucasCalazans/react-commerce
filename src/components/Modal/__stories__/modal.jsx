@@ -6,21 +6,19 @@ const stories = storiesOf('Modal', module);
 
 stories.add('Modal', () => {
     return (
-        <React.Fragment>
-            <Overlay type="fullscreen" padding="0px">
-                <Modal>
-                    <ModalHeader>
-                        <h4>Title</h4>
-                    </ModalHeader>
-                    <ModalContent>
-                        <p>Add content here</p>
-                    </ModalContent>
-                    <ModalFooter>
-                        <Button>Confirmar</Button>
-                        <Button color="secondary">Cancelar</Button>
-                    </ModalFooter>
-                </Modal>
-            </Overlay>
-        </React.Fragment>
+        <Overlay type="fullscreen" padding="0px">
+            <Modal>
+                <ModalHeader>
+                    <h4>Title</h4>
+                </ModalHeader>
+                <ModalContent>
+                    <p>Add content here</p>
+                </ModalContent>
+                <ModalFooter>
+                    <Button>Confirmar</Button>
+                    <Button color="secondary">Cancelar</Button>
+                </ModalFooter>
+            </Modal>
+        </Overlay>
     );
 });
