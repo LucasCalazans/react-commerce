@@ -1,29 +1,29 @@
 import styled from 'styled-components';
-import { media, sizes } from '../../helpers/styles';
+import { media, sizes, colors } from '../../helpers/styles';
 
 export const Modal = styled.div`
     ${media.phone`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: #fff;
+        background-color: ${colors.white};
         height: 100vh;
         width: 100%;
         position: relative;
     `}
     ${media.tablet`
         height: auto;
-        border-radius: 15px;
+        border-radius: ${sizes.medium};
         box-shadow: 0 2px 20px #555;
-        margin: 20% auto;
+        margin: ${sizes.large} auto;
     `}
     ${media.tabletLandscape`
         width: 70%;
-        margin: 15% auto;
+        margin: ${sizes.medium} auto;
     `}
     ${media.desktop`
         width: 50%;
-        margin: 12% auto;
+        margin: ${sizes.small} auto;
     `}
 `;
 
@@ -39,7 +39,7 @@ export const ModalHeader = styled.header`
             width: 100%;
             position: absolute;
             left: 0;
-            top: 60px;
+            top: calc(${sizes.large} + ${sizes.xxLarge});
         }
     `}
 `;
@@ -50,7 +50,7 @@ export const ModalContent = styled.div`
         height: auto;
     `}
     ${media.tablet`
-        margin-bottom: 20px;
+        margin-bottom: ${sizes.large};
     `}
 `;
 
@@ -71,10 +71,10 @@ export const ModalFooter = styled.div`
             width: 100%;
             position: absolute;
             left: 0;
-            bottom: 60px;
+            bottom: calc(${sizes.large} + ${sizes.xxLarge});;
         }
     `}
     ${media.tablet`
-        margin-bottom: 20px;
+        margin-bottom: ${sizes.large};
     `}
 `;
