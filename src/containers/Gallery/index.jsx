@@ -18,9 +18,11 @@ const Gallery = () => {
     return (
         <Carousel
             showIndicators={false}
-            width={450}
+            width={340}
+            dynamicHeight={true}
             onChange={setCurrentSlide}
             selectedItem={currentSlide}
+            showStatus={false}
         >
             <ImgBlock
                 onMouseMove={onMouseMoveHandler}
