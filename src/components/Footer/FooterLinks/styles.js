@@ -69,7 +69,7 @@ const FooterImage = styled.img`
     height: 60px;
     margin-top: ${sizes.large};
     ${media.phoneLandscape`
-        padding-right: calc(${sizes.large} - 10px);
+        padding-right:${sizes.smallAux};
         margin-top:4%;
         width : 30px; 
         height: 30px;
@@ -77,7 +77,7 @@ const FooterImage = styled.img`
 `;
 
 const FooterIcon = styled.img`
-    padding-right: 10px;
+    padding-right: ${sizes.smallAux};
 `;
 
 const BorderDiv = styled.div`
