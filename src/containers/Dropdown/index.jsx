@@ -1,6 +1,6 @@
 import React from 'react';
 import { Title, Link, DropdownContent, ContentTitle, IconArrow } from './styles';
-import { colors } from '../../helpers/styles';
+import { colors } from '../../helpers/styles/index';
 class Dropdown extends React.Component {
     constructor(props) {
         super(props);

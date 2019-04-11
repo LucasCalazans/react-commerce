@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '../../../helpers/styles/index';
+import { media, colors } from '../../../helpers/styles';
 
 const FooterContainer = styled.div`
     display: initial;
@@ -13,7 +13,7 @@ const FooterContainer = styled.div`
 const FooterTitle = styled.dt`
     width: 152px;
     height: 20px;
-    color: #14214e;
+    color: ${colors.primary};
     font-family: Montserrat;
     font-size: 16px;
     font-weight: 700;

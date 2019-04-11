@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Icon from '../Icon';
-import { colors, media } from '../../helpers/styles';
+import Icon from '../../components/Icon/index';
+import { colors, media } from '../../helpers/styles/index';
 const Title = styled.div`
     width: 100%;
     height: 20px;

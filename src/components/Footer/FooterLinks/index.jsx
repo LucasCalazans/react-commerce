@@ -18,8 +18,8 @@ import {
 } from './styles';
 import styled from 'styled-components';
 import media from '../../../helpers/styles/mediaQuery';
-import Dropdown from '../../Dropdown';
-import { DropdownContent, Link } from '../../Dropdown/styles';
+import Dropdown from '../../../containers/Dropdown';
+import { DropdownContent, Link } from '../../../containers/Dropdown/styles';
 
 const DropdownContainer = styled.div`
     ${media.phoneLandscape`
