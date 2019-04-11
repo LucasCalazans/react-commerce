@@ -1,6 +1,6 @@
 import React from 'react';
 
-const icons = {
+export const icons = {
     arrowup: {
         path: 'M259.9,102.7l-4.9-5.2l-4.9,5.2',
         viewBox: '0 0 12 8',
@@ -88,10 +88,12 @@ const Icon = props => {
     const iconWidth = props.iconWidth || '34';
     const iconHeight = props.iconHeight || '34';
     const rotate = props.rotate || false;
+    const className = [icons[props.id].iconName];
+    props.className && className.push(props.className);
 
     return (
         <svg
-            className={`${icons[props.id].iconName} ${props.className}`}
+            className={className.join(' ')}
             xmlns="http://www.w3.org/2000/svg"
             width={iconWidth}
             height={iconHeight}
