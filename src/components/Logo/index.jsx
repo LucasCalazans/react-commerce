@@ -19,7 +19,7 @@ const LogoCont = styled.div`
 
 const Logo = () => (
     <LogoCont>
-        <img src={logoImg} />
+        <img src={logoImg} alt="Truck Transport Logo" />
     </LogoCont>
 );
 
