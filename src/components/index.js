@@ -1,12 +1,30 @@
 import Alert from './Alert';
-import Form from './Form';
 import Button from './Button';
+import Form from './Form';
+import Header from './Header';
+import Home from './Home';
 import Icon from './Icon';
+import IconsGroup from './IconsGroup';
 import Input from './Input';
 import Loader from './Loader';
-import Home from './Home';
 import Logo from './Logo';
-import IconsGroup from './IconsGroup';
-import Header from './Header';
+import { Modal, ModalContent, ModalFooter, ModalHeader } from './Modal';
+import Overlay from './Overlay';
 
-export { Alert, Form, Button, Icon, Input, Loader, Home, Logo, IconsGroup, Header };
+export {
+    Alert,
+    Form,
+    Button,
+    Icon,
+    Input,
+    Loader,
+    Home,
+    Logo,
+    IconsGroup,
+    Header,
+    Modal,
+    ModalFooter,
+    ModalContent,
+    ModalHeader,
+    Overlay,
+};
