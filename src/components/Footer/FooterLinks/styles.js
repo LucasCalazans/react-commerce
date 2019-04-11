@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { media, colors } from '../../../helpers/styles';
+import { media, colors, sizes } from '../../../helpers/styles';
+import fonts from '../../../helpers/styles/fonts';
 
 const FooterContainer = styled.div`
     display: initial;
@@ -14,7 +15,7 @@ const FooterTitle = styled.dt`
     width: 152px;
     height: 20px;
     color: ${colors.primary};
-    font-family: Montserrat;
+    font-family: ${fonts.fontbase};
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 1.6px;
@@ -30,8 +31,8 @@ const FooterTitle = styled.dt`
 const CategoryLinks = styled.a`
     width: 169px;
     height: 68px;
-    color: #707070;
-    font-family: Montserrat;
+    color: ${colors.alternative};
+    font-family: ${fonts.fontbase};
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1.6px;
@@ -48,8 +49,8 @@ const CategoryLinks = styled.a`
 const SupportInfo = styled.span`
     width: 169px;
     height: 68px;
-    color: #707070;
-    font-family: Montserrat;
+    color: ${colors.alternative};
+    font-family: ${fonts.fontbase};
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1.6px;
@@ -66,9 +67,9 @@ const FooterImage = styled.img`
     padding-right: 13%;
     width: 60px;
     height: 60px;
-    margin-top: 20px;
+    margin-top: ${sizes.large};
     ${media.phoneLandscape`
-        padding-right: 10px;
+        padding-right: calc(${sizes.large} - 10px);
         margin-top:4%;
         width : 30px; 
         height: 30px;
@@ -82,7 +83,7 @@ const FooterIcon = styled.img`
 const BorderDiv = styled.div`
     width: 290px;
     height: 1px;
-    background-color: #14214e;
+    background-color: ${colors.primary};
     opacity: 0.93;
     ${media.phoneLandscape`
         display:none;

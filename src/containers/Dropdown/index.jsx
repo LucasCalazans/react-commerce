@@ -23,7 +23,7 @@ class Dropdown extends React.Component {
                     <Title>{this.props.title}</Title>
                     <IconArrow
                         id={this.state.displayMenu ? 'arrowup' : 'arrowdown'}
-                        iconFill={colors.purple}
+                        iconFill={this.props.iconFill || colors.secondary}
                         iconWidth="15"
                         iconHeight="11"
                     />

@@ -9,5 +9,4 @@ export default {
     warning: '#f7b633',
     white: '#fff',
     black: '#000',
-    purple: '#c70041',
 };

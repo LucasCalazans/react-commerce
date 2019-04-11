@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '../../helpers/styles/index';
+import { media, colors, fonts } from '../../helpers/styles/index';
 export const FooterCopyright = styled.div`
     position: absolute;
     ${media.phone`
@@ -14,8 +14,8 @@ export const FooterCopyright = styled.div`
 export const FooterCopyrightPhrase = styled.div`
     width: 391px;
     height: 24px;
-    color: #707070;
-    font-family: Montserrat;
+    color: ${colors.alternative};
+    font-family: ${fonts.fontbase};
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1.4px;
