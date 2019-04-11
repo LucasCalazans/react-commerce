@@ -22,7 +22,7 @@ import Dropdown from '../../../containers/Dropdown';
 import { DropdownContent, Link } from '../../../containers/Dropdown/styles';
 
 const DropdownContainer = styled.div`
-    ${media.phoneLandscape`
+    ${media.tablet`
         display:none;
     `}
 `;

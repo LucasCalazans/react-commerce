@@ -2,6 +2,8 @@ import React from 'react';
 import GlobalStyle from './GlobalStyle';
 import Topmenu from './containers/Topmenu';
 import { Logo, IconsGroup, Header } from './components';
+import Footer from './components/Footer';
+import FooterLinks from './components/Footer/FooterLinks';
 
 const App = ({ children }) => (
     <main>
@@ -11,6 +13,9 @@ const App = ({ children }) => (
             <IconsGroup />
         </Header>
         {children}
+        <Footer>
+            <FooterLinks />
+        </Footer>
         <GlobalStyle />
     </main>
 );

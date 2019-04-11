@@ -38,9 +38,9 @@ const IconArrow = styled(Icon)`
 
     position: absolute;
     top: 0;
-    right: 20%;
+    right: 5%;
 
-    ${media.phoneLandscape`
+    ${media.tablet`
         right:35%;
      
      `}
@@ -53,6 +53,6 @@ const IconArrow = styled(Icon)`
     `}
 `;
 
-const ContentTitle = styled.div``;
+const ContentTitle = styled.span``;
 
 export { Title, Link, DropdownContent, ContentTitle, IconArrow };
