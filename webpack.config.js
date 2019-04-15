@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -23,6 +24,7 @@ module.exports = (env, args) => ({
             BASE_HOST: args.mode === 'development' ? '' : process.env.npm_package_homepage,
         }),
         new CleanWebpackPlugin(['dist']),
+        new CopyPlugin(['./public']),
     ],
     devtool: args.mode === 'development' ? 'inline-source-map' : 'none',
     module: {
