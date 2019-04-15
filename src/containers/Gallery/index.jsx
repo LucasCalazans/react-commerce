@@ -38,33 +38,6 @@ const Gallery = ({ images }) => {
                         </ImgBlock>
                     );
                 })}
-                {/* <ImgBlock
-                    onMouseMove={onMouseMoveHandler}
-                    style={{
-                        backgroundImage: `url(${'http://lorempixel.com/output/cats-q-c-640-480-1.jpg'})`,
-                        backgroundPosition: backgroundPosition,
-                    }}
-                >
-                    <img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" />
-                </ImgBlock>
-                <ImgBlock
-                    onMouseMove={onMouseMoveHandler}
-                    style={{
-                        backgroundImage: `url(${'http://lorempixel.com/output/cats-q-c-640-480-2.jpg'})`,
-                        backgroundPosition: backgroundPosition,
-                    }}
-                >
-                    <img src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" />
-                </ImgBlock>
-                <ImgBlock
-                    onMouseMove={onMouseMoveHandler}
-                    style={{
-                        backgroundImage: `url(${'http://lorempixel.com/output/cats-q-c-640-480-3.jpg'})`,
-                        backgroundPosition: backgroundPosition,
-                    }}
-                >
-                    <img src="http://lorempixel.com/output/cats-q-c-640-480-3.jpg" />
-                </ImgBlock> */}
             </Carousel>
         </GalleryWrapper>
     );
