@@ -9,6 +9,10 @@ export default createGlobalStyle`
 	height: 100%;
 	}
 
+	*{
+		font-family: 'Montserrat';
+	}
+
 	@font-face {
 		font-family: 'Montserrat';
 		src: url('/fonts/Montserrat-Regular.ttf') format('truetype');

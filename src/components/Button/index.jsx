@@ -62,7 +62,6 @@ const fontSize = ({ fontSize }) => {
 
 export default styled.button`
     padding: 12px 50px 13px 50px;
-    font-family: Lato;
     font-size: ${fontSize}px;
     text-transform: uppercase;
     border: 0;
