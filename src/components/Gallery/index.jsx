@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media, sizes } from '../../helpers/styles/';
+import { media, colors } from '../../helpers/styles/';
 
 export const GalleryWrapper = styled.div`
     ${media.phone`
@@ -7,13 +7,19 @@ export const GalleryWrapper = styled.div`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        width: 340px;
+        width: 290px;
         .thumbs {
             display: none;
         }
+        .carousel {
+            width: 100%;
+            .slide {
+                background: ${colors.white};
+            }
+        }
     `}
     ${media.tablet`
-        .thumbs{
+        .thumbs {
             margin: 0;
             padding: 0;
             display: flex;
@@ -33,6 +39,15 @@ export const GalleryWrapper = styled.div`
                 border: none;
             }
         }
+        .control-dots {
+            display: none;
+        }
+    `}
+    ${media.desktop`
+        width: 596px;
+        .carousel {
+            width: 100%;
+        }
     `}
 `;
 
@@ -48,10 +63,10 @@ export const ImgBlock = styled.div`
         }
     `}
     ${media.desktop`
-        background-repeat: no-repeat; 
+        height: 540px;
+        background-repeat: no-repeat;
         &:hover img {
             opacity: 0;
         }
-
     `}
 `;

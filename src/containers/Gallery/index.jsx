@@ -18,23 +18,23 @@ const Gallery = ({ images }) => {
     return (
         <GalleryWrapper>
             <Carousel
-                showIndicators={false}
-                width={340}
-                dynamicHeight={true}
+                showIndicators={true}
                 onChange={setCurrentSlide}
                 selectedItem={currentSlide}
                 showStatus={false}
+                emulateTouch={true}
             >
-                {images.map(image => {
+                {images.map(({ url, altText, id }) => {
                     return (
                         <ImgBlock
                             onMouseMove={onMouseMoveHandler}
+                            key={id}
                             style={{
-                                backgroundImage: `url(${image.url})`,
+                                backgroundImage: `url(${url})`,
                                 backgroundPosition: backgroundPosition,
                             }}
                         >
-                            <img src={image.url} alt={image.altText} />
+                            <img src={url} alt={altText} />
                         </ImgBlock>
                     );
                 })}
