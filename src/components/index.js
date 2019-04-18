@@ -10,6 +10,7 @@ import Loader from './Loader';
 import Logo from './Logo';
 import { Modal, ModalContent, ModalFooter, ModalHeader } from './Modal';
 import Overlay from './Overlay';
+import { ImgBlock, GalleryWrapper } from './Gallery';
 
 export {
     Alert,
@@ -27,4 +28,6 @@ export {
     ModalContent,
     ModalHeader,
     Overlay,
+    ImgBlock,
+    GalleryWrapper,
 };
