@@ -14,7 +14,7 @@ const common = css`
     background: none;
     border: none;
     outline: none;
-    cursor: ${({ active }) => (active ? 'default' : 'pointer')};
+    cursor: ${({ active, disable }) => (active, disable ? 'default' : 'pointer')};
 `;
 
 export const PageButton = styled.button`
@@ -24,15 +24,7 @@ export const PageButton = styled.button`
     color: ${({ active }) => (active ? colors.secondary : colors.primary)};
 `;
 
-const arrowButton = css`
+export const ArrowButton = styled.button`
     ${common}
     padding-top: 8px;
-`;
-
-export const LeftButton = styled.button`
-    ${arrowButton}
-`;
-
-export const RightButton = styled.button`
-    ${arrowButton}
 `;

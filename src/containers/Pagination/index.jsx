@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import { PageWrapper, PageButton, LeftButton, RightButton } from './styles';
+import { PageWrapper, PageButton, ArrowButton } from './styles';
 import { colors } from '../../helpers/styles';
-import Icon from '../Icon';
+import Icon from '../../components/Icon';
 class Pagination extends Component {
-    // Vars -------
     state = {
         currentPage: 1,
     };
 
     static defaultProps = {
+        currentPage: 1,
         itemsPerPage: 10,
         totalItems: 0,
         pagesRange: 2,
     };
 
-    // Main -------
     goToPage(pageNumber) {
         const totalPages = Math.ceil(this.props.totalItems / this.props.itemsPerPage);
 
@@ -27,7 +26,6 @@ class Pagination extends Component {
     }
 
     render() {
-        // Vars
         const pageList = [];
         const totalPages = Math.ceil(this.props.totalItems / this.props.itemsPerPage);
         const currentPage = this.getCurrentPage();
@@ -53,9 +51,9 @@ class Pagination extends Component {
 
             return (
                 <PageWrapper>
-                    <LeftButton
+                    <ArrowButton
                         onClick={() => this.goToPage(currentPage - 1)}
-                        active={currentPage == 1}
+                        disable={currentPage == 1}
                     >
                         <Icon
                             id="arrowleft"
@@ -63,13 +61,13 @@ class Pagination extends Component {
                             iconWidth="13"
                             iconFill={currentPage == 1 ? colors.alternativeLight : colors.secondary}
                         />
-                    </LeftButton>
+                    </ArrowButton>
 
                     {pageList}
 
-                    <RightButton
+                    <ArrowButton
                         onClick={() => this.goToPage(currentPage + 1)}
-                        active={currentPage == totalPages}
+                        disable={currentPage == totalPages}
                     >
                         <Icon
                             id="arrowright"
@@ -81,7 +79,7 @@ class Pagination extends Component {
                                     : colors.secondary
                             }
                         />
-                    </RightButton>
+                    </ArrowButton>
                 </PageWrapper>
             );
         } else {
@@ -89,7 +87,6 @@ class Pagination extends Component {
         }
     }
 
-    // Support --------
     /**
      * Returns a valid current page
      */
