@@ -32,12 +32,10 @@ class Pagination extends Component {
         const minRange = currentPage - parseInt(this.props.pagesRange);
         const maxRange = currentPage + parseInt(this.props.pagesRange);
 
-        // If has results
         if (totalPages > 0) {
             for (let i = 1; i <= totalPages; i++) {
                 let pageButton;
 
-                // Show only specific pages
                 if (i >= minRange && i <= maxRange) {
                     pageButton = (
                         <PageButton onClick={() => this.goToPage(i)} disabled={i == currentPage}>
@@ -87,9 +85,6 @@ class Pagination extends Component {
         }
     }
 
-    /**
-     * Returns a valid current page
-     */
     getCurrentPage() {
         return this.state.currentPage > this.props.totalPages
             ? this.props.totalPages
