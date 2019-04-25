@@ -14,14 +14,14 @@ const common = css`
     background: none;
     border: none;
     outline: none;
-    cursor: ${({ active, disable }) => (active, disable ? 'default' : 'pointer')};
+    cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
 `;
 
 export const PageButton = styled.button`
     ${common}
     font-family: '${fonts.fontbase}';
     font-size: 24px;
-    color: ${({ active }) => (active ? colors.secondary : colors.primary)};
+    color: ${({ disabled }) => (disabled ? colors.secondary : colors.primary)};
 `;
 
 export const ArrowButton = styled.button`

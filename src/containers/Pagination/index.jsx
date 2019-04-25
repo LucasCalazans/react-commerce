@@ -40,7 +40,7 @@ class Pagination extends Component {
                 // Show only specific pages
                 if (i >= minRange && i <= maxRange) {
                     pageButton = (
-                        <PageButton active={i == currentPage} onClick={() => this.goToPage(i)}>
+                        <PageButton onClick={() => this.goToPage(i)} disabled={i == currentPage}>
                             {i}
                         </PageButton>
                     );
@@ -53,7 +53,7 @@ class Pagination extends Component {
                 <PageWrapper>
                     <ArrowButton
                         onClick={() => this.goToPage(currentPage - 1)}
-                        disable={currentPage == 1}
+                        disabled={currentPage == 1}
                     >
                         <Icon
                             id="arrowleft"
@@ -67,7 +67,7 @@ class Pagination extends Component {
 
                     <ArrowButton
                         onClick={() => this.goToPage(currentPage + 1)}
-                        disable={currentPage == totalPages}
+                        disabled={currentPage == totalPages}
                     >
                         <Icon
                             id="arrowright"
