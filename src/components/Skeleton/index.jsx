@@ -17,16 +17,8 @@ export const SkeletonWrapper = styled.span`
     min-width: 16px;
     flex-direction: ${({ type }) => (type === 'row' ? 'row' : 'column')};
     box-sizing: border-box;
-    &.skeleton-phone {
-        ${media.tablet`
-            display: none;
-        `}
-    }
-    &.skeleton-desktop {
-        ${media.phone`
-            display: none;
-        `}
-    }
+    ${({ phone }) => phone && media.tablet`display: none`};
+    ${({ desktop }) => desktop && media.phone`display: none`}
 `;
 
 export const SkeletonItem = styled.span`

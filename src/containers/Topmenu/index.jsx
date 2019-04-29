@@ -21,43 +21,39 @@ class Topmenu extends Component {
         isLoading: true,
     };
 
-    componentWillMount() {
-        localStorage.getItem('categories') &&
+    componentDidMount() {
+        const localCategories = localStorage.getItem('categories');
+        if (localCategories) {
             this.setState({
-                categories: JSON.parse(localStorage.getItem('categories')),
+                categories: JSON.parse(localCategories),
                 isLoading: false,
             });
-    }
-
-    componentDidMount = () => {
-        let newCategories = this.getCategories();
-        if (!localStorage.getItem('categories')) {
-            newCategories;
         }
-    };
+        this.getCategories();
+    }
 
     getCategories = async () => {
         const url = BaseApi.getUrl('categories?_limit=4');
         const response = await fetch(url);
         const categories = await response.json();
-        this.setState(() => ({ categories, isLoading: false }));
+
+        this.setState({ categories, isLoading: false }, () => {
+            localStorage.setItem('categories', JSON.stringify(categories));
+        });
     };
 
-    componentWillUpdate(nextProps, nextState) {
-        localStorage.setItem('categories', JSON.stringify(nextState.categories));
-    }
     render() {
         const { isLoading } = this.state;
         if (isLoading) {
             return (
                 <Fragment>
-                    <SkeletonWrapper width="auto" className="skeleton-phone">
+                    <SkeletonWrapper width="auto" phone>
                         <SkeletonItem width="28px" height="4px" />
                         <SkeletonItem width="28px" height="4px" />
                         <SkeletonItem width="28px" height="4px" />
                     </SkeletonWrapper>
                     <MenuCont>
-                        <SkeletonWrapper type="row" width={`${500}px`}>
+                        <SkeletonWrapper type="row" width="500px">
                             <SkeletonItem />
                             <SkeletonItem />
                             <SkeletonItem />

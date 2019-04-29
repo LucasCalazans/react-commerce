@@ -6,14 +6,12 @@ const stories = storiesOf('Skeleton', module);
 
 stories.add('Example 1', () => {
     return (
-        <Fragment>
-            <SkeletonWrapper>
-                <SkeletonItem />
-                <SkeletonItem />
-                <SkeletonItem />
-                <SkeletonItem />
-            </SkeletonWrapper>
-        </Fragment>
+        <SkeletonWrapper>
+            <SkeletonItem />
+            <SkeletonItem />
+            <SkeletonItem />
+            <SkeletonItem />
+        </SkeletonWrapper>
     );
 });
 stories.add('Example 2', () => {
@@ -38,16 +36,14 @@ stories.add('Example 2', () => {
 });
 stories.add('Example 3', () => {
     return (
-        <Fragment>
-            <SkeletonWrapper>
-                <SkeletonItem height="140px" space="40px" />
+        <SkeletonWrapper>
+            <SkeletonItem height="140px" space="40px" />
+            <SkeletonItem />
+            <SkeletonItem width="60%" />
+            <SkeletonWrapper type="row">
                 <SkeletonItem />
-                <SkeletonItem width="60%" />
-                <SkeletonWrapper type="row">
-                    <SkeletonItem />
-                    <SkeletonItem />
-                </SkeletonWrapper>
+                <SkeletonItem />
             </SkeletonWrapper>
-        </Fragment>
+        </SkeletonWrapper>
     );
 });
