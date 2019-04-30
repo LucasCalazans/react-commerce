@@ -7,11 +7,11 @@ const getBackgroundColor = ({ color, hover }) => {
         case 'secondary':
             return colors.secondary;
         case 'tertiary':
-            return !hover ? colors.tertiary : '#0b7457';
+            return !hover ? colors.tertiary : colors.tertiaryHover;
         case 'alternative':
             return colors.alternative;
         case 'alternativeLight':
-            return !hover ? colors.alternativeLight : '#14214e';
+            return !hover ? colors.alternativeLight : colors.alternativeLightHover;
         case 'success':
             return colors.success;
         case 'danger':
@@ -19,7 +19,7 @@ const getBackgroundColor = ({ color, hover }) => {
         case 'warning':
             return colors.warning;
         default:
-            return !hover ? colors.primary : '#c70041';
+            return !hover ? colors.primary : colors.primaryHover;
     }
 };
 const getFontColor = ({ color, hover }) => {
