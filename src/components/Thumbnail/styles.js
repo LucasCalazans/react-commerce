@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Rating from '../Rating';
+import { colors, sizes, fonts } from '../../helpers/styles';
 
 export const ThumbnailRating = styled(Rating)`
     position: absolute;
@@ -7,16 +8,16 @@ export const ThumbnailRating = styled(Rating)`
     top: 19px;
 `;
 
-export const Thumbnail = styled.div`
+export const Thumb = styled.div`
     position relative;
     width: 278px;
     float: left;
 `;
 
 export const ThumbnailName = styled.div`
-    color: #707070;
-    font-size: 20px;
-    font-weight: 400;
+    color: ${colors.alternative};
+    font-size: ${sizes.large};
+    font-weight: ${fonts.normal};
     line-height: 28px;
     text-align: center;
     margin-top: 4px;
@@ -25,14 +26,14 @@ export const ThumbnailName = styled.div`
 `;
 
 export const SpecialPrice = styled.div`
+    font-size: ${sizes.xLarge};
+    color: ${colors.secondary};
+    font-weight: ${fonts.bold};
     display: block;
     width: 100%;
     float: left;
     text-align: center;
     line-height: 38px;
-    font-size: 25px;
-    color: #c70041;
-    font-weight: 700;
 `;
 
 export const Price = styled.div`
@@ -42,9 +43,9 @@ export const Price = styled.div`
     text-align: center;
     line-height: 38px;
     text-decoration: line-through;
-    font-size: 16px;
-    color: #707070;
-    font-weight: 400;
+    font-size: ${sizes.medium};
+    color: ${colors.alternative};
+    font-weight: ${fonts.normal};
 
     + ${SpecialPrice} {
         width: 50%;
@@ -53,11 +54,11 @@ export const Price = styled.div`
 
 export const Discount = styled.div`
     border-radius: 5px;
-    background-color: #c70041;
+    background-color: ${colors.secondary};
     padding: 2px 10px;
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 700;
+    color: ${colors.white};
+    font-size: ${sizes.large};
+    font-weight: ${fonts.bold};
     line-height: 30px;
     position: absolute;
     right: 0;

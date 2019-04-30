@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
-import * as styles from './styles';
+import { Thumb, ThumbnailRating, Discount, ThumbnailName, Price, SpecialPrice } from './styles';
 
 const Thumbnail = props => {
-    let price = props.product.price;
-    let specialPrice = props.product.special_price;
-    let rating = props.product.rating;
-    let decrease = price - specialPrice;
+    let { price, special_price, rating } = props.product;
+    let decrease = price - special_price;
     let discount = (decrease / price) * 100;
 
-    if (!specialPrice) {
-        specialPrice = price;
+    if (!special_price) {
+        special_price = price;
         price = null;
     }
 
     return (
-        <styles.Thumbnail className="thumbnal-wrapper">
-            <styles.ThumbnailRating value={rating} />
-            <styles.Discount>{discount.toFixed(0)}%</styles.Discount>
+        <Thumb className="thumbnal-wrapper">
+            <ThumbnailRating value={rating} />
+            {price && <Discount>{discount.toFixed(0)}%</Discount>}
             <img src={props.product.thumbnail} alt={props.product.title} width="278" />
-            <styles.ThumbnailName>{props.product.title}</styles.ThumbnailName>
-            {price && <styles.Price>R${price}</styles.Price>}
-            <styles.SpecialPrice>R$ {specialPrice}</styles.SpecialPrice>
-        </styles.Thumbnail>
+            <ThumbnailName>{props.product.title}</ThumbnailName>
+            {price && <Price>R${price}</Price>}
+            <SpecialPrice>R$ {special_price}</SpecialPrice>
+        </Thumb>
     );
 };
 
