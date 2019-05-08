@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react';
-import AccountIcon from '../Icon/Account';
-import Button from '../Button';
+import AccountIcon from '../../components/Icon/Account';
+import Button from '../../components/Button';
 import {
     FilterWrapper,
     FilterHeader,
