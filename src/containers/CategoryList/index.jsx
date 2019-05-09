@@ -1,29 +1,6 @@
 import React, { Component } from 'react';
 import { NavItem, NavList, NavUl, ChooseMenuItem, ChooseMenu, IconArrow } from './styles';
 
-const itensMenu = [
-    {
-        id: 1,
-        label: 'Peças',
-        path: '/pecas',
-    },
-    {
-        id: 2,
-        label: 'Serviços',
-        path: '/servicos',
-    },
-    {
-        id: 3,
-        label: 'Manutenção',
-        path: '/manutencao',
-    },
-    {
-        id: 4,
-        label: 'Sistemas de troca',
-        path: '/sistemas-de-troca',
-    },
-];
-
 class CategoryList extends Component {
     state = {
         menuActive: 1,
@@ -48,16 +25,16 @@ class CategoryList extends Component {
                     </ChooseMenuItem>
                 </ChooseMenu>
                 <NavUl>
-                    {itensMenu.map(menu => (
-                        <NavList key={menu.id}>
+                    {this.props.categories.map(category => (
+                        <NavList key={category.id}>
                             <NavItem
-                                onClick={() => this.setState({ categoryActive: menu.id })}
-                                active={this.state.categoryActive === menu.id}
+                                onClick={() => this.setState({ categoryActive: category.id })}
+                                active={this.state.categoryActive === category.id}
                             >
-                                {menu.label}
+                                {category.title}
                                 <IconArrow
                                     id={
-                                        this.state.categoryActive === menu.id
+                                        this.state.categoryActive === category.id
                                             ? 'arrowup'
                                             : 'arrowdown'
                                     }
