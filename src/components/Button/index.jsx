@@ -25,7 +25,6 @@ const getBackgroundColor = ({ color, hover }) => {
 const getFontColor = ({ color, hover }) => {
     switch (color) {
         case 'alternativeLight':
-            console.log('Funfou');
             return !hover ? '#14214e;' : '#FFFFFF';
         default:
             return '#FFFFFF';
