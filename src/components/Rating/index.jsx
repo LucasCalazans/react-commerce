@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { func } from 'prop-types';
 import Icon from '../Icon';
-import { Star } from './styles';
+import { Star, StarWrapper } from './styles';
+import { colors } from '../../helpers/styles';
 
 class Rating extends Component {
     static propTypes = {
@@ -44,7 +45,7 @@ class Rating extends Component {
         const value = this.props.value ? this.props.value - 1 : this.state.rating;
 
         for (let i = 0; i < 5; i++) {
-            const fill = value >= i && value != null ? 'goldenrod' : 'grey';
+            const fill = value >= i && value != null ? colors.golden : colors.alternativeLight;
 
             stars.push(
                 <Star
@@ -54,12 +55,12 @@ class Rating extends Component {
                     key={i}
                     isFixed={!!this.props.value}
                 >
-                    <Icon id="star" iconFill={fill} iconWidth="28" iconHeight="28" />
+                    <Icon id="star" iconFill={fill} iconWidth="16" iconHeight="16" />
                 </Star>,
             );
         }
 
-        return stars;
+        return <StarWrapper className={this.props.className}>{stars}</StarWrapper>;
     }
 }
 
