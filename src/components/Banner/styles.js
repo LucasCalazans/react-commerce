@@ -1,20 +1,66 @@
 import styled from 'styled-components';
-import { colors, sizes, media } from '../../helpers/styles';
+import { colors, media } from '../../helpers/styles';
 import Icon from '../../components/Icon';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-const NavigationArrow = styled(Icon)`
-    & path {
-        stroke: #ffffff;
-        transform: translate(-249px, -96px);
-        stroke-width: 2;
-    }
+export const CarouselStyled = styled(Carousel)`
+    .carousel.carousel-slider .control-arrow {
+        height: 140px;
+        top: 50%;
+        margin-top: -70px;
+        opacity: 1;
+        &:hover {
+            background: none;
 
-    ${media.tablet`
-        & path {
-            stroke: ${colors.secondary};
-            fill: #ffffff;
+            &:before,
+            &:after {
+                background: ${colors.secondary};
+            }
         }
-    `}
-`;
+        &.control-prev.control-arrow,
+        &.control-next.control-arrow {
+            &:before,
+            &:after {
+                content: '';
+                background: ${colors.white};
+                margin: 0 5px;
+                display: block;
+                border: none;
+                width: 40px;
+                height: 3px;
+            }
+            &:hover {
+                &:before,
+                &:after {
+                    background: ${colors.secondary};
+                }
+            }
 
-export { NavigationArrow };
+            &:before {
+                transform: rotate(-42deg);
+                margin-bottom: 22px;
+                ${media.tablet`
+                    width: 80px;
+                    margin-bottom: 50px;
+                `}
+            }
+
+            &:after {
+                transform: rotate(42deg);
+                ${media.tablet`
+                    width: 80px;
+                    margin-bottom: 0;
+                `}
+            }
+        }
+        &.control-next.control-arrow {
+            &:before {
+                transform: rotate(42deg);
+            }
+            &:after {
+                transform: rotate(-42deg);
+            }
+        }
+    }
+`;
