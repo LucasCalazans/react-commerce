@@ -15,9 +15,19 @@ class Home extends Component {
         const url = BaseApi.getUrl('banners');
         const response = await fetch(url);
         const responseBanner = await response.json();
-        const banners = responseBanner.map(url => ({ url }));
+        const banners = responseBanner.map(banner => {
+            return [
+                {
+                    url: banner[0],
+                    alt: '',
+                },
+                {
+                    url: banner[1],
+                    alt: '',
+                },
+            ];
+        });
         this.setState({ banners });
-        console.log(banners);
     };
 
     render() {
