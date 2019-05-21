@@ -95,6 +95,13 @@ export const icons = {
         viewBox: '0 0 1024 1024 ',
         iconName: 'Star',
     },
+
+    arrowright: {
+        path:
+            'M7.352 128.398v0L72.001 66.45v0L7.352 4.5v0 M7.352 128.398v0L72.001 66.45v0L7.352 4.5v0',
+        viewBox: '0 0 79 139',
+        iconName: 'RightArrow',
+    },
 };
 
 const Icon = props => {

@@ -2,7 +2,6 @@ import Alert from './Alert';
 import Button from './Button';
 import Form from './Form';
 import Header from './Header';
-import Home from './Home';
 import Icon from './Icon';
 import IconsGroup from './IconsGroup';
 import Input from './Input';
@@ -19,7 +18,6 @@ export {
     Icon,
     Input,
     Loader,
-    Home,
     Logo,
     IconsGroup,
     Header,

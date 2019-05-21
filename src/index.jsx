@@ -1,7 +1,7 @@
 import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Home } from './components';
+import Home from './containers/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 module.hot && module.hot.accept();
