@@ -21,6 +21,7 @@ module.exports = (env, args) => ({
             defaultAttribute: 'async',
         }),
         new webpack.DefinePlugin({
+            ENV_MODE: JSON.stringify(args.mode),
             BASE_HOST: args.mode === 'development' ? '' : process.env.npm_package_homepage,
         }),
         new CleanWebpackPlugin(['dist']),
