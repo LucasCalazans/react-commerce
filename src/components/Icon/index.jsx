@@ -93,6 +93,7 @@ const Icon = props => {
 
     return (
         <svg
+            {...props}
             className={className.join(' ')}
             xmlns="http://www.w3.org/2000/svg"
             width={iconWidth}

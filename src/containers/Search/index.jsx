@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Input, Button } from '../../components';
+import { connect } from 'react-redux';
+// import * as actionTypes from '../../redux/actions/index'
 
 const Search = props => {
     const [input, setInput] = useState('');
@@ -30,11 +32,30 @@ const Search = props => {
     }, [query]);
 
     return (
-        <Form onSubmit={onSubmitHandler} data-testid="form-test">
-            <Input placeholder="Busque um produto" onChange={onChangeHandler} value={input} />
-            <Button type="submit">Buscar</Button>
+        <Form
+            isVisible={props.isVisible}
+            id="searchForm"
+            onSubmit={onSubmitHandler}
+            data-testid="form-test"
+        >
+            <Input
+                large
+                placeholder="Busque um produto"
+                onChange={onChangeHandler}
+                value={input}
+                autoFocus
+            />
+            <Button size="large" type="submit">
+                Buscar
+            </Button>
         </Form>
     );
 };
 
-export default Search;
+const mapStateToProps = state => {
+    return {
+        isVisible: state.toggleSearch.isVisible,
+    };
+};
+
+export default connect(mapStateToProps)(Search);

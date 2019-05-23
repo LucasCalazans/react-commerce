@@ -1,0 +1,1 @@
+export { setVisibility } from './toggleSearch';
