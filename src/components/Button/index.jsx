@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, btnSizes } from '../../helpers/styles';
+import { colors, btnSizes, sizes } from '../../helpers/styles';
 
-const color = ({ color }) => {
+const getBackgroundColor = ({ color, hover }) => {
     switch (color) {
         case 'secondary':
             return colors.secondary;
+        case 'tertiary':
+            return !hover ? colors.tertiary : colors.tertiaryHover;
+        case 'alternative':
+            return colors.alternative;
+        case 'alternativeLight':
+            return !hover ? colors.alternativeLight : colors.alternativeLightHover;
         case 'success':
             return colors.success;
         case 'danger':
@@ -13,10 +19,17 @@ const color = ({ color }) => {
         case 'warning':
             return colors.warning;
         default:
-            return colors.primary;
+            return !hover ? colors.primary : colors.primaryHover;
     }
 };
-
+const getFontColor = ({ color, hover }) => {
+    switch (color) {
+        case 'alternativeLight':
+            return !hover ? '#14214e;' : '#FFFFFF';
+        default:
+            return '#FFFFFF';
+    }
+};
 const size = ({ size }) => {
     switch (size) {
         case 'small':
@@ -24,16 +37,44 @@ const size = ({ size }) => {
         case 'large':
             return btnSizes.large;
         default:
-            return btnSizes.default;
+            return btnSizes.def;
+    }
+};
+const fontSize = ({ fontSize }) => {
+    switch (fontSize) {
+        case 'xxSmall':
+            return sizes.xxSmall;
+        case 'xSmall':
+            return sizes.xSmall;
+        case 'small':
+            return sizes.small;
+        case 'large':
+            return sizes.large;
+        case 'xLarge':
+            return sizes.xLarge;
+        case 'xxLarge':
+            return sizes.xxLarge;
+        default:
+            return sizes.medium;
     }
 };
 
 export default styled.button`
-    padding: 12px 15px;
+    padding: 12px 50px 13px 50px;
+    font-size: ${fontSize}px;
+    text-transform: uppercase;
     border: 0;
-    background-color: ${color};
-    color: #f5f5f5;
+    background-color: ${getBackgroundColor};
+    color: ${getFontColor};
+    font-weight: 800;
+    line-height: 20px;
     height: ${size}px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: ${({ color }) => getBackgroundColor({ color, hover: true })};
+        color: ${({ color }) => getFontColor({ color, hover: true })};
+    }
 `;

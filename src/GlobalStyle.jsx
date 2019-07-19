@@ -11,12 +11,18 @@ export const styles = css`
         height: 100%;
     }
 
-    @font-face {
-        font-family: 'Montserrat';
-        src: url(${Montserrat}) format('truetype');
-        font-weight: 500;
-        font-style: normal;
-    }
+	*{
+		font-family: 'Montserrat';
+	}
+
+	@font-face {
+		font-family: 'Montserrat';
+		src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+		font-weight: 500;
+	    font-style: normal;
+	    letter-spacing: 1px;
+	}
+
 `;
 
 export default createGlobalStyle`
